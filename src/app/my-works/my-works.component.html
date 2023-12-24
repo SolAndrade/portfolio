@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+</head>
+
+<body>
+    <div class="works">
+        <header>
+            <app-header></app-header>
+        </header>
+        <!--<div class="title" [@titleAnimation] #titleContainer>-->
+        <div class="title">
+            <div class="txt-my">
+                {{ titleBegin }}
+            </div>
+            <div class="txt-section">
+                {{ titleEnd }}
+            </div>
+        </div>
+        <nav>
+            <app-navbar></app-navbar>
+        </nav>
+        <div class="works-index">
+            <div class="works-year">
+                <div class="works-preview" id="works-preview" (mouseout)="handleUnhover()">
+                    <div *ngFor="let project of projects2023" class="work-preview-item">
+                        <a [routerLink]="['/projects', project.titleHeading]">
+                            <img loading="lazy" [src]="project['previewImg']" class="img"
+                                id="{{ 'img' + project.titleHeading}}"
+                                (mouseover)="handleHover('img' + project.titleHeading)" />
+                        </a>
+                    </div>
+                    <div class="projects-nbr">{{ projects2023.length }} projects</div>
+                </div>
+            </div>
+            <div class="works-year">
+                <div class="works-preview" id="works-preview" (mouseout)="handleUnhover()">
+                    <div *ngFor="let project of projects2022" class="work-preview-item">
+                        <a [routerLink]="['/projects', project.titleHeading]">
+                            <img loading="lazy" [src]="project['previewImg']" class="img"
+                                id="{{ 'img' + project.titleHeading}}"
+                                (mouseover)="handleHover('img' + project.titleHeading)" />
+                        </a>
+                    </div>
+                    <div class="projects-nbr">{{ projects2022.length }} projects</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!--<div class="works-index">
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <div class="date" style="color: #000">2023</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <div class="date">2022</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <div class="date">2021</div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="works-2023">
+        <div class="works-preview" id="works-preview" (mouseout)="handleUnhover()">
+            <div class="work-preview-item">
+                <a href="42OpenCyber">
+                    <img loading="lazy" src="../../assets/img/works/works-preview/42OpenCyber.png" class="img ftOpenCyber" id="img1"
+                        (mouseover)="handleHover('img1')" />
+                </a>
+            </div>
+            <div class="work-preview-item">
+                <a href="openTechies">
+                    <img loading="lazy" src="../../assets/img/works/works-preview/OpenTechies.png" class="img openTechies" id="img2"
+                        (mouseover)="handleHover('img2')" />
+                </a>
+            </div>
+            <div class="work-preview-item">
+                <a href="fireWatcher">
+                    <img loading="lazy" src="../../assets/img/works/works-preview/FireWatcher.png" class="img fireWatcher" id="img3"
+                        (mouseover)="handleHover('img3')" />
+                </a>
+            </div>
+            <div class="work-preview-item">
+                <a href="hickathon">
+                    <img loading="lazy" src="../../assets/img/works/works-preview/Hickathon.png" class="img hickathon" id="img4"
+                        (mouseover)="handleHover('img4')" />
+                </a>
+            </div>
+        </div>
+        <div class="projects-nbr">4 projects</div>
+    </div>
+</div>-->

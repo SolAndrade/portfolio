@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>a</title>
+</head>
+
+<body>
+  <div class="project">
+    <header>
+      <app-header></app-header>
+    </header>
+    <nav>
+      <app-navbar></app-navbar>
+    </nav>
+    <div class="nav-buttons">
+      <a (click)="changeImage(-1)">
+        <img src="../../../assets/img/buttons/left-button.png" alt="">
+      </a>
+      <a [routerLink]="['/works']">
+        <img src="../../../assets/img/buttons/exit-button.png" alt="">
+      </a>
+      <a (click)="changeImage(1)">
+        <img src="../../../assets/img/buttons/right-button.png" alt="">
+      </a>
+    </div>
+    <section class="scrolled-view">
+      <section class="main-view">
+        <div class="main-project-details" *ngIf="showMainInfo === true">
+          <div class="title">
+            <div class="title-heading">
+              <p>{{ project.titleHeading }}</p>
+            </div>
+            <div class="title-subheading">
+              <p>{{ project.titleSubheading }}</p>
+            </div>
+          </div>
+          <section class="project-details">
+            <img [src]="project.logo" alt="Project Logo">
+            <section class="project-details-info">
+              <div class="detail-section">
+                <p class="detail-type">Client:</p>
+                <p class="detail-info">{{ project.client }}</p>
+              </div>
+              <div class="detail-section">
+                <p class="detail-type">Year:</p>
+                <p class="detail-info">{{ project.year }}</p>
+              </div>
+              <div *ngIf="project.type !== ''" class="detail-section">
+                <p class="detail-type">Type:</p>
+                <p class="detail-info">{{ project.type }}</p>
+              </div>
+              <div class="detail-section">
+                <p class="detail-type">Role:</p>
+                <p class="detail-info">{{ project.role }}</p>
+                <a [href]="project.link" target="_blank">Visit site</a>
+              </div>
+            </section>
+          </section>
+        </div>
+        <section class="project-images" *ngIf="project.images.length > 0">
+          <div class="images" [ngClass]="{ 'active': currentImageIndex >= 0 }">
+            <img *ngIf="currentImageIndex >= 0" [src]="project.images[currentImageIndex]" alt="image">
+          </div>
+        </section>        
+      </section>
+    </section>
+  </div>
+</body>
+
+</html>

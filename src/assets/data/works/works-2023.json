@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "titleHeading": "42",
+        "titleSubheading":  "Tech2Peer",
+        "previewImg": "../../assets/img/works/2023/42Tech2Peer/preview-img.png",
+        "logo": "../../assets/img/works/2023/42Tech2Peer/logo42.png",
+        "client": "42 Málaga Fundación Telefónica",
+        "type": "",
+        "year": 2023,
+        "role": "UI Designer & FrontEnd Developer",
+        "projectDescription": "42's Cybersecurity Capture The Flag (CTF) is a thrilling, beginner-friendly challenge designed to immerse participants into the world of cybersecurity. Tailored for those new to the field, this CTF offers a hands-on experience, encouraging problem-solving and critical thinking in a fun and supportive environment.",
+        "projectRoleDescription": "As the UI designer and frontend developer for 42's CTF, I crafted the user interface in Figma and brought it to life using Angular. My role focused on delivering a visually appealing and user-friendly experience for participants navigating the cybersecurity challenges.",
+        "mainImg": "../../assets/img/works/2023/42Tech2Peer/main-img.png",
+        "imgOne": "../../assets/img/works/2023/42Tech2Peer/image-one.png",
+        "images": [
+            "../../assets/img/works/2023/42Tech2Peer/main-img.png",
+            "../../assets/img/works/2023/42Tech2Peer/image-one.png",
+            "../../assets/img/works/2023/42Tech2Peer/image-two.png",
+            "../../assets/img/works/2023/42Tech2Peer/image-three.png"
+        ],
+        "link": "https://www.42malaga.com/"
+    },
+    {
+        "id": 2,
+        "titleHeading": "OpenTechies",
+        "titleSubheading":  "JunctionXMalaga",
+        "previewImg": "../../assets/img/works/2023/OpenTechies/preview-img.png",
+        "logo": "../../assets/img/works/2023/OpenTechies/logoOpenTechies.png",
+        "client": "42 Málaga",
+        "type": "Hackathon",
+        "year": 2023,
+        "role": "UI Designer & FrontEnd Developer",
+        "projectDescription": "42's Cybersecurity Capture The Flag (CTF) is a thrilling, beginner-friendly challenge designed to immerse participants into the world of cybersecurity. Tailored for those new to the field, this CTF offers a hands-on experience, encouraging problem-solving and critical thinking in a fun and supportive environment.",
+        "projectRoleDescription": "As the UI designer and frontend developer for 42's CTF, I crafted the user interface in Figma and brought it to life using Angular. My role focused on delivering a visually appealing and user-friendly experience for participants navigating the cybersecurity challenges.",
+        "mainImg": "../../assets/img/works/2023/OpenTechies/main-img.png",
+        "imgOne": "../../assets/img/works/2023/OpenTechies/image-one.png",
+        "images": [
+            "../../assets/img/works/2023/OpenTechies/image-two.png",
+            "../../assets/img/works/2023/OpenTechies/image-three.png"
+        ]
+    }
+]
