@@ -11,8 +11,6 @@
         "role": "UI Designer & FrontEnd Developer",
         "projectDescription": "42's Cybersecurity Capture The Flag (CTF) is a thrilling, beginner-friendly challenge designed to immerse participants into the world of cybersecurity. Tailored for those new to the field, this CTF offers a hands-on experience, encouraging problem-solving and critical thinking in a fun and supportive environment.",
         "projectRoleDescription": "As the UI designer and frontend developer for 42's CTF, I crafted the user interface in Figma and brought it to life using Angular. My role focused on delivering a visually appealing and user-friendly experience for participants navigating the cybersecurity challenges.",
-        "mainImg": "../../assets/img/works/2023/42Tech2Peer/main-img.png",
-        "imgOne": "../../assets/img/works/2023/42Tech2Peer/image-one.png",
         "images": [
             "../../assets/img/works/2023/42Tech2Peer/main-img.png",
             "../../assets/img/works/2023/42Tech2Peer/image-one.png",
@@ -33,11 +31,10 @@
         "role": "UI Designer & FrontEnd Developer",
         "projectDescription": "42's Cybersecurity Capture The Flag (CTF) is a thrilling, beginner-friendly challenge designed to immerse participants into the world of cybersecurity. Tailored for those new to the field, this CTF offers a hands-on experience, encouraging problem-solving and critical thinking in a fun and supportive environment.",
         "projectRoleDescription": "As the UI designer and frontend developer for 42's CTF, I crafted the user interface in Figma and brought it to life using Angular. My role focused on delivering a visually appealing and user-friendly experience for participants navigating the cybersecurity challenges.",
-        "mainImg": "../../assets/img/works/2023/OpenTechies/main-img.png",
-        "imgOne": "../../assets/img/works/2023/OpenTechies/image-one.png",
         "images": [
             "../../assets/img/works/2023/OpenTechies/image-two.png",
             "../../assets/img/works/2023/OpenTechies/image-three.png"
-        ]
+        ],
+        "link": "https://github.com/SolAndrade/CloselyOpenTechies"
     }
 ]

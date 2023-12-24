@@ -11,17 +11,17 @@
     <header>
       <app-header></app-header>
     </header>
-    <nav>
+    <nav [@navbarAnimation]="navbarState">
       <app-navbar></app-navbar>
     </nav>
     <div class="nav-buttons">
-      <a (click)="changeImage(-1)">
+      <a [ngClass]="{'disabled': currentImageIndex === 0}" (click)="changeImage(-1)">
         <img src="../../../assets/img/buttons/left-button.png" alt="">
       </a>
       <a [routerLink]="['/works']">
         <img src="../../../assets/img/buttons/exit-button.png" alt="">
       </a>
-      <a (click)="changeImage(1)">
+      <a [ngClass]="{'disabled': currentImageIndex === project.images.length - 1}" (click)="changeImage(1)">
         <img src="../../../assets/img/buttons/right-button.png" alt="">
       </a>
     </div>
@@ -58,6 +58,12 @@
               </div>
             </section>
           </section>
+        </div>
+        <div class="project-description" *ngIf="projectDescriptionTxt">
+          <p>
+            <img src="../../../assets/img/init-dot.png" alt="init-dot">
+            {{ project.projectDescription }}
+          </p>
         </div>
         <section class="project-images" *ngIf="project.images.length > 0">
           <div class="images" [ngClass]="{ 'active': currentImageIndex >= 0 }">
