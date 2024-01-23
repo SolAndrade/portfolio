@@ -65,6 +65,12 @@
             {{ project.projectDescription }}
           </p>
         </div>
+        <div class="project-description" *ngIf="projectRoleDescriptionTxt">
+          <p>
+            <img src="../../../assets/img/init-dot.png" alt="init-dot">
+            {{ project.projectRoleDescription }}
+          </p>
+        </div>
         <section class="project-images" *ngIf="project.images.length > 0">
           <div class="images" [ngClass]="{ 'active': currentImageIndex >= 0 }">
             <img *ngIf="currentImageIndex >= 0" [src]="project.images[currentImageIndex]" alt="image">

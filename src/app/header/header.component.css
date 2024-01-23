@@ -9,3 +9,16 @@ header {
     text-align: right;
     font: 400 14px Inter, sans-serif;
 }
+
+.brand {
+    width: 95%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}

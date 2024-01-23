@@ -6,19 +6,42 @@ body {
 }
 
 nav {
+  z-index: 2;
   overflow: hidden;
   display: flex;
   align-self: stretch;
   justify-content: space-between;
-  gap: 20px;
-  flex-grow: 1;
   transition: background 0.5s ease;
   margin: 10px 0px;
   padding: 50px;
+  position: relative;
 }
 
-nav:hover {
-  background-color: #000;
+nav::before,
+nav::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: 50% 50%;
+  transform: scaleY(0);
+  transition: transform 0.6s ease;
+}
+
+nav::before {
+  background: linear-gradient(to top, #000 0%, #000 50%, transparent 50%, transparent 100%);
+}
+
+nav::after {
+  background: linear-gradient(to bottom, #000 0%, #000 50%, transparent 50%, transparent 100%);
+}
+
+nav:hover::before,
+nav:hover::after {
+  transform: scaleY(1);
 }
 
 nav:hover .nav-item-title {
@@ -34,15 +57,12 @@ nav:hover .nav-item-title {
   margin: 0;
   padding: 0;
   position: relative;
-
 }
 
 .nav-link {
   align-items: left;
   text-decoration: none;
   display: flex;
-  flex-grow: 1;
-  flex-basis: 0%;
   flex-direction: column;
   margin: auto 0;
 }
@@ -56,11 +76,10 @@ nav:hover .nav-item-title {
 
 .nav-item-title {
   color: #000;
-  text-align: right;
   margin-top: 5px;
   white-space: nowrap;
   font: 400 16px Inter, sans-serif;
-  transition: color 0.5s ease;
+  transition: color 0.6s ease;
 }
 
 .nav-copyright {
@@ -69,4 +88,87 @@ nav:hover .nav-item-title {
   white-space: nowrap;
   margin: auto 0;
   font: 400 12px Inter, sans-serif;
+}
+
+.title {
+  z-index: 4;
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  align-items: center;
+  justify-content: center;
+}
+
+.txt-start {
+  color: grey;
+  text-align: center;
+  font: 400 170px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+    sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.txt-end {
+  color: grey;
+  text-align: center;
+  font: 400 190px Inter, sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.txt-start span,
+.txt-end span {
+  display: inline-block;
+  transform: translateY(100%);
+  animation: appear 0.5s forwards ease-in-out;
+}
+
+.txt-start span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.txt-end span:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.txt-end span:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.txt-end span:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.txt-end span:nth-child(4) {
+  animation-delay: 0.32s;
+}
+
+@keyframes appear {
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes disappear {
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.nav-item:hover .title {
+  display: flex;
+}
+
+.nav-item:not(:hover) .title {
+  visibility: hidden; /* Hide the element but keep the space */
+  opacity: 0; /* Make the element transparent */
+  display: flex; /* Keep the display property to ensure the animation runs */
+}
+
+.nav-item:not(:hover) .txt-start span,
+.nav-item:not(:hover) .txt-end span {
+  animation-name: disappear;
 }

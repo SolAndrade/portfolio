@@ -3,7 +3,7 @@ body {
   background-color: #ebebeb;
   margin: 0;
   padding: 0;
-  max-height: 100vh;
+  max-height: 100%;
   overflow: hidden;
 }
 
@@ -11,7 +11,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 0;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 header {
@@ -24,6 +27,10 @@ nav {
   align-self: stretch;
 }
 
+nav {
+  position: absolute;
+}
+
 .title {
   gap: 20px;
   display: flex;
@@ -33,7 +40,7 @@ nav {
   color: #000;
   text-align: center;
   letter-spacing: -9px;
-  font: 400 130px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+  font: 400 220px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
     sans-serif;
 }
 
@@ -44,20 +51,23 @@ nav {
   letter-spacing: -4.8px;
   white-space: nowrap;
   margin: auto 0;
-  font: 500 120px Inter, sans-serif;
+  font: 400 200px Inter, sans-serif;
 }
 
-.img {
-  aspect-ratio: 1.33;
-  object-fit: contain;
-  object-position: center;
+.image {
+  display: flex;
+  justify-content: center;
   width: 25%;
-  background-blend-mode: darken;
-  overflow: hidden;
   max-width: 100%;
-  margin: 35px 0 0px;
+  margin-top: 8%;
+  bottom: 0;
 }
 
-footer {
+
+.footer {
+  width: 100%;
   font: 300 14px Inter, sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
 }

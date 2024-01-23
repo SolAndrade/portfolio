@@ -3,7 +3,7 @@ body {
     background-color: #ebebeb;
     margin: 0;
     padding: 0;
-    max-height: 100vh;
+    max-height: 100%;
     overflow: hidden;
 }
 
@@ -11,6 +11,9 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .works-index {
@@ -19,13 +22,27 @@ body {
     padding-left: 50px;
 }
 
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
 header,
 nav {
     width: 100%;
     align-self: stretch;
 }
 
+nav {
+    position: absolute;
+}
+
 .title {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 4%;
     gap: 20px;
     display: flex;
     align-items: center;
@@ -36,7 +53,7 @@ nav {
     color: #000;
     text-align: center;
     letter-spacing: -9px;
-    font: 400 130px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+    font: 400 200px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
         sans-serif;
 }
 
@@ -47,7 +64,12 @@ nav {
     letter-spacing: -4.8px;
     white-space: nowrap;
     margin: auto 0;
-    font: 500 120px Inter, sans-serif;
+    font: 400 190px Inter, sans-serif;
+}
+
+.works-index {
+    bottom: 0;
+    position: absolute;
 }
 
 .nav-dates {

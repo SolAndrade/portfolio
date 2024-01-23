@@ -28,6 +28,7 @@ export class ProjectComponent implements OnInit {
   activeRightButton = true;
   activeLeftButton = false;
   projectDescriptionTxt = false;
+  projectRoleDescriptionTxt = false;
 
 
   constructor(
@@ -51,6 +52,7 @@ export class ProjectComponent implements OnInit {
     this.currentImageIndex = (this.currentImageIndex + index + this.project.images.length) % this.project.images.length;
     this.showMainInfo = this.currentImageIndex === 0;
     this.projectDescriptionTxt = this.currentImageIndex === 1;
+    this.projectRoleDescriptionTxt = this.currentImageIndex === 2;
   }
 
   toggleNavbarAnimation() {
