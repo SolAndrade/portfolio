@@ -88,6 +88,11 @@ nav {
             }
         }
 
+        .project-description,
+        .project-images {
+            transition: transform 1300ms ease-in-out;
+        }
+
         .project-details {
             padding: 0px 50px;
             height: 100%;

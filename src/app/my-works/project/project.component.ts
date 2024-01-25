@@ -18,6 +18,16 @@ import { WorksService } from 'src/app/services/works.service';
       transition('visible => hidden', animate('600ms ease-out')),
       transition('hidden => visible', animate('300ms ease-in')),
     ]),
+    trigger('imageSlide', [
+      transition(':increment', [
+        style({ transform: 'translateX(100%)', opacity: 0 }),
+        animate('1000ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
+      ]),
+      transition(':decrement', [
+        style({ transform: 'translateX(-100%)', opacity: 0 }),
+        animate('1000ms ease-out', style({ transform: 'translateX(0)', opacity: 1 })),
+      ]),
+    ]),
   ],
 })
 export class ProjectComponent implements OnInit {
@@ -45,7 +55,7 @@ export class ProjectComponent implements OnInit {
     });
   }
 
-  changeImage(index: number) {
+  /*changeImage(index: number) {
     const isVisible = this.navbarState === 'visible';
     const isHidden = this.navbarState === 'hidden';
     (index === 1 && isVisible) || (index === -1 && isHidden) ? this.toggleNavbarAnimation() : null;
@@ -53,7 +63,19 @@ export class ProjectComponent implements OnInit {
     this.showMainInfo = this.currentImageIndex === 0;
     this.projectDescriptionTxt = this.currentImageIndex === 1;
     this.projectRoleDescriptionTxt = this.currentImageIndex === 2;
+  }*/
+
+  changeImage(index: number) {
+    const isVisible = this.navbarState === 'visible';
+    const isHidden = this.navbarState === 'hidden';
+    (index === 1 && isVisible) || (index === -1 && isHidden) ? this.toggleNavbarAnimation() : null;
+
+    this.currentImageIndex = (this.currentImageIndex + index + this.project.images.length) % this.project.images.length;
+    this.showMainInfo = this.currentImageIndex === 0;
+    this.projectDescriptionTxt = this.currentImageIndex === 1;
+    this.projectRoleDescriptionTxt = this.currentImageIndex === 2;
   }
+
 
   toggleNavbarAnimation() {
     this.navbarState = (this.navbarState === 'visible') ? 'hidden' : 'visible';

@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-  z-index: 2;
+  z-index: 1;
   overflow: hidden;
   display: flex;
   align-self: stretch;
@@ -65,6 +65,7 @@ nav:hover .nav-item-title {
   display: flex;
   flex-direction: column;
   margin: auto 0;
+  position: relative;
 }
 
 .nav-item-number {
@@ -91,7 +92,6 @@ nav:hover .nav-item-title {
 }
 
 .title {
-  z-index: 4;
   display: none;
   width: 100%;
   position: absolute;
@@ -100,6 +100,7 @@ nav:hover .nav-item-title {
   transform: translateY(-50%);
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 }
 
 .txt-start {
