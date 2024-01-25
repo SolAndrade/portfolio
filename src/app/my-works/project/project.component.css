@@ -27,6 +27,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     bottom: 0;
     gap: 30px;
     margin-bottom: 30px;
