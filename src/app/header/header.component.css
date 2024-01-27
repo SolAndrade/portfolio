@@ -5,13 +5,14 @@ header {
 }
 
 header > * {
-    width: 12%;
+    width: 11%;
 }
 
 .header-txt {
     color: #000;
     text-align: right;
     font: 400 14px Inter, sans-serif;
+    margin-right: 20px;
 }
 
 .brand {
