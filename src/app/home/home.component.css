@@ -34,12 +34,13 @@ nav {
 .title {
   gap: 20px;
   display: flex;
+  margin-top: 3%;
   
   .txt-my {
     color: #000;
     text-align: center;
     letter-spacing: -9px;
-    font: 400 220px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+    font: 400 140px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
       sans-serif;
   }
   
@@ -50,7 +51,7 @@ nav {
     letter-spacing: -4.8px;
     white-space: nowrap;
     margin: auto 0;
-    font: 400 200px Inter, sans-serif;
+    font: 400 120px Inter, sans-serif;
   }
 }
 
@@ -60,7 +61,7 @@ nav {
   justify-content: center;
   width: 25%;
   max-width: 100%;
-  margin-top: 8%;
+  margin-top: 10%;
   bottom: 0;
 }
 

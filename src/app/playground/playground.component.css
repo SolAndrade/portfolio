@@ -32,15 +32,21 @@ nav {
 }
 
 .title {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 8%;
     gap: 20px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .txt-my {
     color: #000;
     text-align: center;
     letter-spacing: -9px;
-    font: 400 220px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+    font: 400 140px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
         sans-serif;
 }
 
@@ -51,7 +57,7 @@ nav {
     letter-spacing: -4.8px;
     white-space: nowrap;
     margin: auto 0;
-    font: 400 200px Inter, sans-serif;
+    font: 400 120px Inter, sans-serif;
 }
 
 .info {
@@ -59,18 +65,19 @@ nav {
     justify-content: center;
     width: 50%;
     max-width: 100%;
-    margin-top: 8%;
+    margin-top: 24%;
 
     p {
         text-align: center;
-        font: 400 30px Inter, sans-serif;
+        font: 400 24px Inter, sans-serif;
         color: black;
         line-height: 1.5em;
+        letter-spacing: 1.5px;
     }
 }
 
 .fix {
-    margin-top: 0;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     text-align: center;

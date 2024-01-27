@@ -6,23 +6,13 @@ import { WorksService } from '../services/works.service';
 @Component({
   selector: 'app-my-works',
   templateUrl: './my-works.component.html',
-  styleUrls: ['./my-works.component.css'],
-  animations: [
-    trigger('titleAnimation', [
-      state('void', style({ transform: 'translateY(100%)' })),
-      state('*', style({ transform: 'translateY(0)' })),
-      transition('void => *', animate('500ms ease-in-out')),
-      transition('* => void', animate('300ms ease-in-out'))
-    ])
-  ]
+  styleUrls: ['./my-works.component.css']
 })
-export class MyWorksComponent implements OnInit{
+export class MyWorksComponent implements OnInit {
   projects2023: any[] = [];
   projects2022: any[] = [];
 
   @ViewChild('titleContainer') titleContainer: any;
-  
-  private titleAnimationPlayer: AnimationPlayer | undefined;
 
   titleBegin: string = 'My';
   titleEnd: string = 'Works';
@@ -40,6 +30,10 @@ export class MyWorksComponent implements OnInit{
     this.worksService.getWorks2022().subscribe((data: any[]) => {
       this.projects2022 = data;
     });
+    /*setTimeout(() => {
+      this.loader = false;
+      this.toggleAnimation();
+    }, 2000);*/
   }
 
   handleHover(imageId: string): void {

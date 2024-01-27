@@ -1,6 +1,5 @@
 body {
     width: 100%;
-    background-color: #ebebeb;
     margin: 0;
     padding: 0;
     max-height: 100%;
@@ -8,6 +7,7 @@ body {
 }
 
 .works {
+    background-color: #ebebeb;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -42,29 +42,29 @@ nav {
     width: 100%;
     position: absolute;
     top: 0;
-    margin-top: 4%;
+    margin-top: 8%;
     gap: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.txt-my {
-    color: #000;
-    text-align: center;
-    letter-spacing: -9px;
-    font: 400 200px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
-        sans-serif;
-}
-
-.txt-section {
-    padding-top: 20px;
-    color: #000;
-    text-align: center;
-    letter-spacing: -4.8px;
-    white-space: nowrap;
-    margin: auto 0;
-    font: 400 190px Inter, sans-serif;
+    
+    .txt-my {
+        color: #000;
+        text-align: center;
+        letter-spacing: -9px;
+        font: 400 140px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+            sans-serif;
+    }
+    
+    .txt-section {
+        padding-top: 20px;
+        color: #000;
+        text-align: center;
+        letter-spacing: -4.8px;
+        white-space: nowrap;
+        margin: auto 0;
+        font: 400 120px Inter, sans-serif;
+    }
 }
 
 .works-index {
@@ -140,3 +140,38 @@ nav {
     white-space: nowrap;
     font: 300 16px Inter, sans-serif;
 }
+
+/*.transition {
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.title-transition {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: background 0.5s ease;
+
+    .txt-my-transition {
+        color: #fff;
+        text-align: center;
+        font: 400 170px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+            sans-serif;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .txt-section-transition {
+        color: #fff;
+        text-align: center;
+        font: 400 190px Inter, sans-serif;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}*/

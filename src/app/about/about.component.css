@@ -34,24 +34,25 @@ nav {
 .title {
     gap: 20px;
     display: flex;
-}
-
-.txt-my {
-    color: #000;
-    text-align: center;
-    letter-spacing: -9px;
-    font: 400 220px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
-        sans-serif;
-}
-
-.txt-section {
-    padding-top: 20px;
-    color: #000;
-    text-align: center;
-    letter-spacing: -4.8px;
-    white-space: nowrap;
-    margin: auto 0;
-    font: 400 200px Inter, sans-serif;
+    margin-top: 3%;
+    
+    .txt-my {
+        color: #000;
+        text-align: center;
+        letter-spacing: -9px;
+        font: 400 140px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+            sans-serif;
+    }
+    
+    .txt-section {
+        padding-top: 20px;
+        color: #000;
+        text-align: center;
+        letter-spacing: -4.8px;
+        white-space: nowrap;
+        margin: auto 0;
+        font: 400 120px Inter, sans-serif;
+    }
 }
 
 .fix {

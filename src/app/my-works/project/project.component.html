@@ -54,7 +54,7 @@
               <div class="detail-section">
                 <p class="detail-type">Role:</p>
                 <p class="detail-info">{{ project.role }}</p>
-                <a [href]="project.link" target="_blank">Visit site</a>
+                <a [href]="project.link" target="_blank" *ngIf="project.link">Visit site</a>
               </div>
             </section>
           </section>
