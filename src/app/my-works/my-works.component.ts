@@ -77,9 +77,13 @@ export class MyWorksComponent implements OnInit {
         this.titleBegin = 'Fire';
         this.titleEnd = 'Watcher';
         break;
-      case 'imgHickathon':
+      case 'imgAbsences system':
         this.titleBegin = 'H';
         this.titleEnd = 'ickathon';
+        break;
+      case 'imgReBranding':
+        this.titleBegin = 'Re';
+        this.titleEnd = 'Branding';
         break;
       default:
         break;

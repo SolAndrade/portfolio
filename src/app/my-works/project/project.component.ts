@@ -55,16 +55,6 @@ export class ProjectComponent implements OnInit {
     });
   }
 
-  /*changeImage(index: number) {
-    const isVisible = this.navbarState === 'visible';
-    const isHidden = this.navbarState === 'hidden';
-    (index === 1 && isVisible) || (index === -1 && isHidden) ? this.toggleNavbarAnimation() : null;
-    this.currentImageIndex = (this.currentImageIndex + index + this.project.images.length) % this.project.images.length;
-    this.showMainInfo = this.currentImageIndex === 0;
-    this.projectDescriptionTxt = this.currentImageIndex === 1;
-    this.projectRoleDescriptionTxt = this.currentImageIndex === 2;
-  }*/
-
   changeImage(index: number) {
     const isVisible = this.navbarState === 'visible';
     const isHidden = this.navbarState === 'hidden';
