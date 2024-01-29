@@ -6,6 +6,7 @@
     left: 5%;
     transform: translateY(-50%);
     justify-content: center;
+    pointer-events: none;
 }
 
 .txt-start {
