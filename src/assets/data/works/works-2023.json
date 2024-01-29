@@ -31,8 +31,8 @@
         "projectDescription": "42's Cybersecurity Capture The Flag (CTF) is a thrilling, beginner-friendly challenge designed to immerse participants into the world of cybersecurity. Tailored for those new to the field, this CTF offers a hands-on experience, encouraging problem-solving and critical thinking in a fun and supportive environment.",
         "projectRoleDescription": "As the UI designer and frontend developer for 42's CTF, I crafted the user interface in Figma and brought it to life using Angular. My role focused on delivering a visually appealing and user-friendly experience for participants navigating the cybersecurity challenges.",
         "images": [
-            "../../assets/img/works/2023/42Tech2Peer/main-img.png",
             "../../assets/img/works/2023/42Tech2Peer/image-one.png",
+            "../../assets/img/works/2023/42Tech2Peer/main-img.png",
             "../../assets/img/works/2023/42Tech2Peer/image-three.png"
         ]
     },
@@ -49,32 +49,14 @@
         "projectDescription": "'Closely' secured a spot in the finals at the Junction Hackathon, is focused in elevating market appeal demands innovative tech solutions. We microsegment customers using real-time emotional and contextual data analyzed with AI. We collect info through facial recognition, location tracking, user history, companion profiles, external factors, and outfit style. Processed with a pre-trained AI model, this data personalizes offers through dynamic storefronts and the mall's app. The outcome: Improved shopping experiences, boosted advertising effectiveness, and increased customer satisfaction in malls.",
         "projectRoleDescription": "As the UI Designer, Frontend Developer, and Team Lead for 'Closely' in the 32-hour Junction Hackathon, I crafted a mobile web app mockup using Angular. From Figma design to functional app, my role involved ensuring seamless, user-friendly experiences. Us, a team composed by 5 programmers and designers with our collaborative effort secured 'Closely' a spot in the finals, showcasing our dedication to enhancing the mall experience for users.",
         "images": [
-            "../../assets/img/works/2023/OpenTechies/main-img.png",
             "../../assets/img/works/2023/OpenTechies/image-one.png",
-            "../../assets/img/works/2023/OpenTechies/image-three.png"
+            "../../assets/img/works/2023/OpenTechies/main-img.png",
+            "../../assets/img/works/2023/OpenTechies/image-two.png"
         ],
         "link": "https://github.com/SolAndrade/CloselyOpenTechies"
     },
     {
         "id": 4,
-        "titleHeading": "ReBranding",
-        "titleSubheading": "for a logistics company",
-        "previewImg": "../../assets/img/works/2023/ReBranding/main-img.png",
-        "logo": "../../assets/img/works/2023/OpenTechies/logoOpenTechies.png",
-        "client": "Transporte El Pampero | Servicios Logisticos",
-        "type": "",
-        "year": 2023,
-        "role": "Graphic Designer",
-        "projectDescription": "",
-        "projectRoleDescription": "",
-        "images": [
-            "../../assets/img/works/2023/OpenTechies/image-two.png",
-            "../../assets/img/works/2023/OpenTechies/image-three.png"
-        ],
-        "link": "https://github.com/SolAndrade/Hickathon"
-    },
-    {
-        "id": 5,
         "titleHeading": "Absences system",
         "titleSubheading":  "Hickathon",
         "previewImg": "../../assets/img/works/2023/Hickathon/main-img.png",
@@ -83,11 +65,11 @@
         "type": "Hackathon",
         "year": 2023,
         "role": "UI Designer | FrontEnd Developer | Team Lead",
-        "projectDescription": "This Hakcathon had as a challenge implementing an absences management web system in 40 hours. As a solution I Developed a robust system for employees and managers. Utilized HTML, CSS, JavaScript, GIT, NodeJS, Express, AngularJS, and MySQL Workbench. The outcome: Streamlined absence management, showcasing proficiency in diverse technologies and earning a finalist position in the Hicron Hackathon.",
+        "projectDescription": "This Hackathon challenge was to implement an absences management web system in 40 hours. As a solution I Developed a robust system for employees and managers. Utilized HTML, CSS, JavaScript, GIT, NodeJS, Express, AngularJS, and MySQL Workbench. The outcome: Streamlined absence management, showcasing proficiency in diverse technologies and earning a finalist position in the Hicron Hackathon.",
         "projectRoleDescription": "I developed an Absences Management Web System. My role included implementing the system using HTML, CSS, JavaScript, GIT, NodeJS, Express, AngularJS, and MySQL Workbench. Our collaborative effort resulted in a finalist position, demonstrating the effective use of diverse technologies to streamline absence management within the given time frame.",
         "images": [
-            "../../assets/img/works/2023/OpenTechies/image-two.png",
-            "../../assets/img/works/2023/OpenTechies/image-three.png"
+            "../../assets/img/works/2023/Hickathon/image-one.png",
+            "../../assets/img/works/2023/Hickathon/image-two.png"
         ],
         "link": "https://github.com/SolAndrade/Hickathon"
     }

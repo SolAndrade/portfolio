@@ -42,7 +42,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     .txt-my {
         color: #000;
         text-align: center;
@@ -50,7 +50,7 @@ nav {
         font: 400 140px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
             sans-serif;
     }
-    
+
     .txt-section {
         padding-top: 20px;
         color: #000;
@@ -64,20 +64,32 @@ nav {
 
 .works-index {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     padding-left: 50px;
     bottom: 0;
     position: absolute;
+
+    .works-nav {
+        display: flex;
+        gap: 20px;
+
+        .works-year-txt {
+            font: 400 16px Inter, sans-serif;
+            color: #6c6c6c;
+        }
+
+        .selected {
+            color: black;
+            font-weight: 500;
+        }
+    }
 
     .works-year {
         align-self: left;
         margin: 0px 60px 10px 0px;
         padding: 0;
         position: relative;
-    
-        .works-year-txt {
-            font: 400 16px Inter, sans-serif;
-        }
     }
 }
 

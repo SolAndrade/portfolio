@@ -34,8 +34,11 @@
             <app-navbar></app-navbar>
         </nav>
         <div class="works-index">
-            <div class="works-year">
-                <p class="works-year-txt">2023</p>
+            <div class="works-nav">
+                <p class="works-year-txt" (click)="updateDisplay(2023)" [ngClass]="{ 'selected': year === 2023 }">2023</p>
+                <!--<p class="works-year-txt" (click)="updateDisplay(2022)" [ngClass]="{ 'selected': year === 2022 }">2022</p>-->
+            </div>
+            <div class="works-year" *ngIf="year === 2023">
                 <div class="works-preview" id="works-preview" (mouseout)="handleUnhover()">
                     <div *ngFor="let project of projects2023" class="work-preview-item">
                         <a [routerLink]="['/projects', project.titleHeading]">
@@ -47,8 +50,7 @@
                     <div class="projects-nbr">{{ projects2023.length }} projects</div>
                 </div>
             </div>
-            <div class="works-year" *ngIf="projects2022.length > 0">
-                <p class="works-year-txt">2022</p>
+            <div class="works-year" *ngIf="year === 2022">
                 <div class="works-preview" id="works-preview" (mouseout)="handleUnhover()">
                     <div *ngFor="let project of projects2022" class="work-preview-item">
                         <a [routerLink]="['/projects', project.titleHeading]">

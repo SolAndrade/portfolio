@@ -11,6 +11,9 @@ import { WorksService } from '../services/works.service';
 export class MyWorksComponent implements OnInit {
   projects2023: any[] = [];
   projects2022: any[] = [];
+  projectsDisplay: any[] = [];
+
+  year = 2023;
 
   @ViewChild('titleContainer') titleContainer: any;
 
@@ -34,6 +37,10 @@ export class MyWorksComponent implements OnInit {
       this.loader = false;
       this.toggleAnimation();
     }, 2000);*/
+  }
+
+  updateDisplay(year: number) {
+    this.year = year;
   }
 
   handleHover(imageId: string): void {
