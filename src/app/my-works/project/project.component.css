@@ -27,7 +27,6 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     bottom: 0;
     gap: 30px;
     margin-bottom: 30px;
@@ -52,114 +51,82 @@ nav {
     width: 100%;
     justify-content: space-between;
 
-    .main-project-details {
+}
+
+.main-project-details {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title {
+    padding-left: 50px;
+}
+
+.title-heading p {
+    font: 400 110px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+        sans-serif;
+    margin: 0;
+}
+
+.title-subheading {
+    margin-top: -40px;
+}
+
+.title-subheading p {
+    letter-spacing: -4.8px;
+    white-space: nowrap;
+    font: 500 80px Inter, sans-serif;
+    margin: 0;
+}
+
+.project-description,
+.project-images {
+    transition: transform 1300ms ease-in-out;
+}
+
+.project-details img {
+    max-height: 250px;
+    margin-top: 30px;
+}
+
+.project-details {
+    padding: 0px 50px;
+    height: 100%;
+    margin-top: 26%;
+
+    .detail-section p {
+        margin: 0;
+    }
+
+    .detail-section {
         display: flex;
-        flex-direction: column;
+        margin: 20px 0;
 
-        .title {
-            padding-left: 50px;
-
-            .title-heading {
-                margin: 0;
-                padding: 0;
-
-            }
-
-            .title-heading p {
-                letter-spacing: 0px;
-                font: 400 110px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
-                    sans-serif;
-                margin: 0;
-                padding: 0;
-            }
-
-            .title-subheading {
-                margin: 0;
-                padding: 0;
-                margin-top: -40px;
-            }
-
-            .title-subheading p {
-                letter-spacing: -4.8px;
-                white-space: nowrap;
-                font: 500 80px Inter, sans-serif;
-                margin: 0;
-                padding: 0;
-            }
+        .detail-type {
+            font: 400 16px Inter, sans-serif;
+            color: #979797;
+            width: 90px;
         }
 
-        .project-description,
-        .project-images {
-            transition: transform 1300ms ease-in-out;
+        .detail-info {
+            font: 400 16px Inter, sans-serif;
         }
+    }
 
-        .project-details img {
-            max-height: 250px;
-            margin-top: 30px;
-        }
-
-        .project-details {
-            padding: 0px 50px;
-            height: 100%;
-            margin-top: 26%;
-
-
-            .project-details-info {
-
-                .detail-section p {
-                    margin: 0;
-                    padding: 0;
-                }
-
-                .detail-section {
-                    display: flex;
-                    margin: 20px 0;
-
-
-                    .detail-type {
-                        white-space: nowrap;
-                        font: 400 16px Inter, sans-serif;
-                        color: #979797;
-                        width: 90px;
-                    }
-
-                    .detail-info {
-                        white-space: nowrap;
-                        font: 400 16px Inter, sans-serif;
-                    }
-
-                }
-
-                .detail-section a {
-                    margin-left: 30px;
-                    white-space: nowrap;
-                    font: 300 16px Inter, sans-serif;
-                    color: black;
-                    text-decoration: none;
-                    font-style: italic;
-                }
-            }
-        }
+    .detail-section a {
+        margin-left: 30px;
+        font: 300 16px Inter, sans-serif;
+        color: black;
+        text-decoration: none;
+        font-style: italic;
     }
 }
 
 .project-images {
     display: flex;
     justify-content: flex-end;
-    position: fixed;
-    top: 0;
     right: 0;
-    width: 50%;
-    height: 100%;
-}
-
-.images {
-    z-index: -10;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    align-items: flex-end;
-
 }
 
 .images img {
@@ -174,18 +141,17 @@ nav {
     width: 50%;
     display: flex;
     justify-content: center;
-    margin-top: 8%;    
+    margin-top: 8%;
 }
 
-p {
+.project-description p {
     width: 80%;
     text-align: justify;
     font: 400 25px Inter, sans-serif;
-    color: black;
     line-height: 1.3em;
 }
 
-img {
+.project-description img {
     width: 20px;
     height: 20px;
     margin-right: 7em;
