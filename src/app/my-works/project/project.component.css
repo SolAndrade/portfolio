@@ -63,28 +63,28 @@ nav {
                 margin: 0;
                 padding: 0;
 
-                p {
-                    letter-spacing: 0px;
-                    font: 400 110px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
-                        sans-serif;
-                    margin: 0;
-                    padding: 0;
-                }
             }
 
+            .title-heading p {
+                letter-spacing: 0px;
+                font: 400 110px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+                    sans-serif;
+                margin: 0;
+                padding: 0;
+            }
 
             .title-subheading {
                 margin: 0;
                 padding: 0;
                 margin-top: -40px;
+            }
 
-                p {
-                    letter-spacing: -4.8px;
-                    white-space: nowrap;
-                    font: 500 80px Inter, sans-serif;
-                    margin: 0;
-                    padding: 0;
-                }
+            .title-subheading p {
+                letter-spacing: -4.8px;
+                white-space: nowrap;
+                font: 500 80px Inter, sans-serif;
+                margin: 0;
+                padding: 0;
             }
         }
 
@@ -93,25 +93,28 @@ nav {
             transition: transform 1300ms ease-in-out;
         }
 
+        .project-details img {
+            max-height: 250px;
+            margin-top: 30px;
+        }
+
         .project-details {
             padding: 0px 50px;
             height: 100%;
             margin-top: 26%;
 
-            img {
-                max-height: 250px;
-                margin-top: 30px;
-            }
 
             .project-details-info {
+
+                .detail-section p {
+                    margin: 0;
+                    padding: 0;
+                }
+
                 .detail-section {
                     display: flex;
                     margin: 20px 0;
 
-                    p {
-                        margin: 0;
-                        padding: 0;
-                    }
 
                     .detail-type {
                         white-space: nowrap;
@@ -125,22 +128,19 @@ nav {
                         font: 400 16px Inter, sans-serif;
                     }
 
-                    a {
-                        margin-left: 30px;
-                        white-space: nowrap;
-                        font: 300 16px Inter, sans-serif;
-                        color: black;
-                        text-decoration: none;
-                        font-style: italic;
-                    }
+                }
+
+                .detail-section a {
+                    margin-left: 30px;
+                    white-space: nowrap;
+                    font: 300 16px Inter, sans-serif;
+                    color: black;
+                    text-decoration: none;
+                    font-style: italic;
                 }
             }
-
         }
     }
-
-
-
 }
 
 .project-images {
@@ -160,33 +160,33 @@ nav {
     height: 100%;
     align-items: flex-end;
 
-    img {
-        width: 50vw;
-        height: 100vh;
-        max-width: 100%;
-        display: block;
-        margin: 0 auto;
-    }
+}
+
+.images img {
+    width: 50vw;
+    height: 100vh;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .project-description {
     width: 50%;
     display: flex;
     justify-content: center;
-    margin-top: 8%;
+    margin-top: 8%;    
+}
 
-    p {
-        width: 80%;
-        text-align: justify;
-        font: 400 25px Inter, sans-serif;
-        color: black;
-        line-height: 1.3em;
+p {
+    width: 80%;
+    text-align: justify;
+    font: 400 25px Inter, sans-serif;
+    color: black;
+    line-height: 1.3em;
+}
 
-        img {
-            width: 20px;
-            height: 20px;
-            margin-right: 7em;
-        }
-    }
-
+img {
+    width: 20px;
+    height: 20px;
+    margin-right: 7em;
 }
