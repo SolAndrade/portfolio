@@ -27,7 +27,7 @@
         "client": "42 Málaga Fundación Telefónica",
         "type": "",
         "year": 2023,
-        "role": "UI Designer & FrontEnd Developer",
+        "role": "UI Designer | FrontEnd Developer",
         "projectDescription": "42's Cybersecurity Capture The Flag (CTF) is a thrilling, beginner-friendly challenge designed to immerse participants into the world of cybersecurity. Tailored for those new to the field, this CTF offers a hands-on experience, encouraging problem-solving and critical thinking in a fun and supportive environment.",
         "projectRoleDescription": "As the UI designer and frontend developer for 42's CTF, I crafted the user interface in Figma and brought it to life using Angular. My role focused on delivering a visually appealing and user-friendly experience for participants navigating the cybersecurity challenges.",
         "images": [
@@ -64,7 +64,7 @@
         "client": "Hicron",
         "type": "Hackathon",
         "year": 2023,
-        "role": "UI Designer | FrontEnd Developer | Team Lead",
+        "role": "Full Stack Developer",
         "projectDescription": "This Hackathon challenge was to implement an absences management web system in 40 hours. As a solution I Developed a robust system for employees and managers. Utilized HTML, CSS, JavaScript, GIT, NodeJS, Express, AngularJS, and MySQL Workbench. The outcome: Streamlined absence management, showcasing proficiency in diverse technologies and earning a finalist position in the Hicron Hackathon.",
         "projectRoleDescription": "I developed an Absences Management Web System. My role included implementing the system using HTML, CSS, JavaScript, GIT, NodeJS, Express, AngularJS, and MySQL Workbench. Our collaborative effort resulted in a finalist position, demonstrating the effective use of diverse technologies to streamline absence management within the given time frame.",
         "images": [

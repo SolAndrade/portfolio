@@ -33,6 +33,12 @@
     animation: appear 0.5s forwards ease-in-out;
 }
 
+@keyframes appear {
+    to {
+        transform: translateY(0%);
+    }
+}
+
 .txt-start span:nth-child(1) {
     animation-delay: 0s;
 }
@@ -71,16 +77,4 @@
 
 .txt-end span:nth-child(9) {
     animation-delay: 0.45s;
-}
-
-@keyframes appear {
-    to {
-        transform: translateY(0%);
-    }
-}
-
-@keyframes disappear {
-    to {
-        transform: translateY(100%);
-    }
 }

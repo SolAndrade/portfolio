@@ -15,6 +15,7 @@ nav {
   margin: 10px 0px;
   padding: 50px;
   position: relative;
+  height: 25px;
 }
 
 nav::before,
@@ -36,7 +37,7 @@ nav::before {
 }
 
 nav::after {
-  background: linear-gradient(to bottom, #000 0%, #000 50%, transparent 50%, transparent 100%);
+  background: linear-gradient(to bottom, #000 0%, #000 60%, transparent 50%, transparent 100%);
 }
 
 nav:hover::before,
@@ -90,12 +91,10 @@ nav:hover .nav-item-title {
 }
 
 .nav-item:not(:hover) .title {
-  visibility: hidden;
   opacity: 0;
-  display: flex;
 }
 
 .nav-item:not(:hover) .txt-start span,
 .nav-item:not(:hover) .txt-end span {
-  animation: dissapear 0.5s backwards ease-in-out;
+  animation: disappear 0.5s forwards ease-in-out;
 }

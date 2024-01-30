@@ -1,6 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { slideInAnimation } from 'src/app/animations';
 import { WorksService } from 'src/app/services/works.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { WorksService } from 'src/app/services/works.service';
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.css'],
   animations: [
+    slideInAnimation,
     trigger('navbarAnimation', [
       state('visible', style({
         opacity: 1,

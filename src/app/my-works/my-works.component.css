@@ -87,16 +87,19 @@ nav {
 
     .works-year {
         align-self: left;
-        margin: 0px 60px 10px 0px;
+        margin-bottom: 10px;
         padding: 0;
         position: relative;
+    }
+
+    .works-preview {
+        margin: 0;
     }
 }
 
 
 .works-preview {
     align-self: stretch;
-    margin-top: 20px;
     display: flex;
     height: auto;
     padding: 0;
