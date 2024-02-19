@@ -9,12 +9,12 @@ import { MyWorksComponent } from './my-works/my-works.component';
 
 const routes: Routes = [
   { path: 'portfolio', component: HomeComponent },
-  { path: 'portfolio/home', component: HomeComponent },
-  { path: 'portfolio/works', component: MyWorksComponent },
-  { path: 'portfolio/about', component: AboutComponent },
-  { path: 'portfolio/playground', component: PlaygroundComponent },
-  { path: 'portfolio/contact', component: ContactComponent },
-  { path: 'portfolio/projects/:id', component: ProjectComponent },
+  { path: '/home', component: HomeComponent },
+  { path: '/works', component: MyWorksComponent },
+  { path: '/about', component: AboutComponent },
+  { path: '/playground', component: PlaygroundComponent },
+  { path: '/contact', component: ContactComponent },
+  { path: '/projects/:id', component: ProjectComponent },
   { path: '', component: HomeComponent },
 ];
 
