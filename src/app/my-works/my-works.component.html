@@ -42,7 +42,7 @@
                 <div class="works-preview" id="works-preview" (mouseout)="handleUnhover()">
                     <div *ngFor="let project of projects2023" class="work-preview-item">
                         <a [routerLink]="['/projects', project.titleHeading]">
-                            <img loading="lazy" [src]="project['previewImg']" class="img"
+                            <img loading="lazy" [src]="project.previewImg" class="img"
                                 id="{{ 'img' + project.titleHeading}}"
                                 (mouseover)="handleHover('img' + project.titleHeading)" />
                         </a>
@@ -54,7 +54,7 @@
                 <div class="works-preview" id="works-preview" (mouseout)="handleUnhover()">
                     <div *ngFor="let project of projects2022" class="work-preview-item">
                         <a [routerLink]="['/projects', project.titleHeading]">
-                            <img loading="lazy" [src]="project['previewImg']" class="img"
+                            <img loading="lazy" [src]="project.previewImg" class="img"
                                 id="{{ 'img' + project.titleHeading}}"
                                 (mouseover)="handleHover('img' + project.titleHeading)" />
                         </a>
