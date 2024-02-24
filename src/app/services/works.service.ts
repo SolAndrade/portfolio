@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class WorksService {
   private works2023 = '../../assets/data/works/works-2023.json';
   private works2022 = '../../assets/data/works/works-2022.json';
+  private works = '../../assets/data/works/works.json';
 
   constructor(private http: HttpClient) {}
 
@@ -17,6 +18,10 @@ export class WorksService {
 
   getWorks2022(): Observable<any[]> {
     return this.http.get<any[]>(this.works2022);
+  }
+
+  getWorks(): Observable<any[]> {
+    return this.http.get<any[]>(this.works);
   }
 
 }

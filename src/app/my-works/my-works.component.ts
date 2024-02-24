@@ -1,6 +1,8 @@
 import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { trigger, state, style, animate, transition, AnimationPlayer, AnimationBuilder } from '@angular/animations';
 import { WorksService } from '../services/works.service';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -24,14 +26,13 @@ export class MyWorksComponent implements OnInit {
     private animationBuilder: AnimationBuilder,
     private worksService: WorksService,
     private renderer: Renderer2,
+    private _route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
-    this.worksService.getWorks2023().subscribe((data: any[]) => {
-      this.projects2023 = data;
-    });
-    this.worksService.getWorks2022().subscribe((data: any[]) => {
-      this.projects2022 = data;
+    this._route.data.subscribe(data => {
+      this.projects2023 = data['projectsData'].projects2023;
+      this.projects2022 = data['projectsData'].projects2022;
     });
     /*setTimeout(() => {
       this.loader = false;

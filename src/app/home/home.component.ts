@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   img = './assets/img/home-girl.gif';
-
 }
