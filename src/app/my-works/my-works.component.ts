@@ -3,6 +3,7 @@ import { trigger, state, style, animate, transition, AnimationPlayer, AnimationB
 import { WorksService } from '../services/works.service';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs';
 
 
 @Component({
@@ -24,15 +25,20 @@ export class MyWorksComponent implements OnInit {
 
   constructor(
     private animationBuilder: AnimationBuilder,
-    private worksService: WorksService,
+    private _worksService: WorksService,
     private renderer: Renderer2,
     private _route: ActivatedRoute,
+    private _http: HttpClient,
   ) { }
 
   ngOnInit(): void {
-    this._route.data.subscribe(data => {
+    /*this._route.data.subscribe(data => {
       this.projects2023 = data['projectsData'].projects2023;
       this.projects2022 = data['projectsData'].projects2022;
+    });*/
+    this._http.get<any>('./assets/data/works/works.json').subscribe(data => {
+      this.projects2023 = data.works2023;
+      this.projects2022 = data.works2022;
     });
     /*setTimeout(() => {
       this.loader = false;
