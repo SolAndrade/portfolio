@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  img = './assets/img/home-girl.gif';
+  img = './assets/img/playground.gif';
 }

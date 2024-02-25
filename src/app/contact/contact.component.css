@@ -37,12 +37,12 @@ nav {
     flex-direction: column;
     position: absolute;
     top: 0;
-    margin-top: 6%;
+    margin-top: 4%;
 
     .txt-start {
         color: #000;
         text-align: center;
-        font: 400 120px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+        font: 400 150px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
             sans-serif;
         margin-bottom: -20px;
     }
@@ -52,7 +52,7 @@ nav {
         color: #000;
         text-align: center;
         letter-spacing: -4.8px;
-        font: 400 100px Inter, sans-serif;
+        font: 400 110px Inter, sans-serif;
     }
 }
 
@@ -91,4 +91,15 @@ nav {
             }
         }
     }
+}
+
+.image img {
+    width: 500px;
+    height: auto;
+}
+
+@media screen and (max-width: 1740px) {
+}
+
+@media screen and (min-width: 1741px) {
 }

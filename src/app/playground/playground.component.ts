@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent {
-
+  img = './assets/img/playground.gif';
 }

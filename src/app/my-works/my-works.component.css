@@ -37,7 +37,7 @@ nav {
     width: 100%;
     position: absolute;
     top: 0;
-    margin-top: 8%;
+    margin-top: 5%;
     gap: 20px;
     display: flex;
     align-items: center;
@@ -47,7 +47,7 @@ nav {
         color: #000;
         text-align: center;
         letter-spacing: -9px;
-        font: 400 140px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+        font: 400 200px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
             sans-serif;
     }
 
@@ -58,7 +58,7 @@ nav {
         letter-spacing: -4.8px;
         white-space: nowrap;
         margin: auto 0;
-        font: 400 120px Inter, sans-serif;
+        font: 400 180px Inter, sans-serif;
     }
 }
 
