@@ -1,4 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { slideInAnimation } from 'src/app/animations';
@@ -41,20 +42,30 @@ export class ProjectComponent implements OnInit {
   activeLeftButton = false;
   projectDescriptionTxt = false;
   projectRoleDescriptionTxt = false;
+  projectsRoute = './assets/data/works/works.json';
 
+  navLeftButton = './assets/img/buttons/left-button.png';
+  navExitButton = './assets/img/buttons/exit-button.png'
+  navRightButton = './assets/img/buttons/right-button.png'
 
   constructor(
     private route: ActivatedRoute,
     private worksService: WorksService,
+    private _http: HttpClient,
   ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       const projectId = params['id'];
-      this.worksService.getWorks2023().subscribe((data: any[]) => {
+      /*this.worksService.getWorks2023().subscribe((data: any[]) => {
         this.project = data.find((project) => project.titleHeading === projectId);
+      });*/
+      this._http.get<any>(this.projectsRoute).subscribe(data => {
+        this.project = data.works2023.find((project: { titleHeading: any; }) => project.titleHeading === projectId);
+        console.log(this.project);
       });
     });
+
   }
 
   changeImage(index: number) {

@@ -15,6 +15,7 @@ export class MyWorksComponent implements OnInit {
   projects2023: any[] = [];
   projects2022: any[] = [];
   projectsDisplay: any[] = [];
+  projectsRoute = './assets/data/works/works.json';
 
   year = 2023;
 
@@ -32,13 +33,9 @@ export class MyWorksComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    /*this._http.get<any>('./assets/data/works/works.json').subscribe(data => {
+    this._http.get<any>(this.projectsRoute).subscribe(data => {
       this.projects2023 = data.works2023;
       this.projects2022 = data.works2022;
-    });*/
-    this._route.data.subscribe(data => {
-      this.projects2023 = data['projectsData'].projects2023;
-      this.projects2022 = data['projectsData'].projects2022;
     });
     console.log(this.projects2023);
     /*setTimeout(() => {

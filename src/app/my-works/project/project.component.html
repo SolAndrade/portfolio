@@ -16,13 +16,13 @@
     </nav>
     <div class="nav-buttons">
       <a [ngClass]="{'disabled': currentImageIndex === 0}" (click)="changeImage(-1)">
-        <img src="../../../assets/img/buttons/left-button.png" alt="">
+        <img [src]="navLeftButton" alt="">
       </a>
       <a [routerLink]="['/works']">
-        <img src="../../../assets/img/buttons/exit-button.png" alt="">
+        <img [src]="navExitButton" alt="">
       </a>
       <a [ngClass]="{'disabled': currentImageIndex === project.images.length - 1}" (click)="changeImage(1)">
-        <img src="../../../assets/img/buttons/right-button.png" alt="">
+        <img [src]="navRightButton" alt="">
       </a>
     </div>
     <section class="scrolled-view">

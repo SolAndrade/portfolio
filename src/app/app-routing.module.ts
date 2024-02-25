@@ -6,18 +6,11 @@ import { PlaygroundComponent } from './playground/playground.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectComponent } from './my-works/project/project.component';
 import { MyWorksComponent } from './my-works/my-works.component';
-import { ProjectsResolver } from './router/resolver/projects.resolver';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  {
-    path: 'works',
-    component: MyWorksComponent,
-    resolve: {
-      projectsData: ProjectsResolver,
-    }
-  },
+  { path: 'works', component: MyWorksComponent },
   { path: 'about', component: AboutComponent },
   { path: 'playground', component: PlaygroundComponent },
   { path: 'contact', component: ContactComponent },
