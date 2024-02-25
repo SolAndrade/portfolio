@@ -34,11 +34,43 @@
             <div class="about-me-descriptions">
                 <div class="top-description">
                     <div class="circle"></div>
-                    <p>Been immersing into<span class="f-secondary"> PROGRAMMING </span>and<span class="f-secondary"> TECH </span>for over 5 years, I'm currently based in Málaga, Spain</p>
+                    <p>Been immersing into<span class="f-secondary"> PROGRAMMING </span>and<span class="f-secondary">
+                            TECH </span>for over 5 years, I'm currently based in Málaga, Spain</p>
+                </div>
+                <div class="bottom-description">
+                    <p>I<span class="f-secondary"> LIKE </span>to<span class="f-secondary"> CREATE IDEAS </span>and
+                        carry projects from scratch into<span class="f-secondary"> MEMORABLE CREATIONS. </span></p>
+                </div>
+            </div>
+            <div class="skills-display">
+                <div class="top-skills-display">
+                    <ng-container *ngFor="let skill of topSkillsDisplay">
+                        <p>{{ skill }}</p>
+                    </ng-container>
+                </div>
+                <div class="bottom-skills-display">
+                    <ng-container *ngFor="let skill of hardSkillsDisplay">
+                        <p>{{ skill }}</p>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="cv-content">
+                    <p>anything else...?</p>
+                    <a [href]="cv" download="SolAndradeCV.pdf" class="cv-button">
+                        here is my CV, take a look!
+                    </a>
+                </div>
+                <div class="contact-content" [routerLink]="['/contact']">
+                    <p>let's create <span class="f-secondary">together</span> :)</p>
+                    <div class="contact-button">
+                        <p>contact me</p>
+                        <!--<img [src]="arrowDiagonal" alt="arrow-diagonal">-->
+                    </div>
                 </div>
             </div>
         </div>
-        <p class="footer">just an ordinary designer</p>
+        <p class="eop">just an ordinary designer</p>
     </div>
 </body>
 

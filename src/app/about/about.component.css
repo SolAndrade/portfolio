@@ -3,127 +3,263 @@ body {
     background-color: #1E1E1E;
     margin: 0;
     padding: 0;
-    max-height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 0;
     height: 100vh;
     box-sizing: border-box;
+    position: relative;
+}
+
+header,
+nav {
+    z-index: 4;
+    width: 100%;
+    align-self: stretch;
+    position: fixed;
 }
 
 header {
     width: 100%;
 }
 
-header,
 nav {
-    width: 100%;
-    align-self: stretch;
+    top: 43%;
 }
-
-nav {
-    position: absolute;
-}
-
-/*.title {
-    gap: 20px;
-    display: flex;
-    margin-top: 3%;
-    
-    .txt-my {
-        color: #EBEBEB;
-        text-align: center;
-        letter-spacing: -9px;
-        font: 400 140px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
-            sans-serif;
-    }
-    
-    .txt-section {
-        padding-top: 20px;
-        color: #EBEBEB;
-        text-align: center;
-        letter-spacing: -4.8px;
-        white-space: nowrap;
-        margin: auto 0;
-        font: 400 120px Inter, sans-serif;
-    }
-}*/
-
-/*.info {
-    margin-top: 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap: 100px;
-
-    .download-link {
-        font: 400 26px Inter, sans-serif;
-        color: black;
-        text-decoration: none;
-    }
-
-    .fix {
-        font: 400 16px Inter, sans-serif;
-        color: black;
-    }
-}*/
 
 .about-me-img {
     position: absolute;
+    margin-top: 200px;
 }
 
 .content {
+    margin-top: 100px;
     z-index: 3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .about-me-descriptions {
+    max-width: 100vw;
+    align-items: center;
+    justify-content: center;
 
+    .top-description, .bottom-description {
+        display: flex;
+    }
+    
+    .circle {
+        position: absolute;
+        background-color: #EBEBEB;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        margin: 1.3em 0 0 50px;
+    }
+    
+    .top-description {
+        justify-content: left;
+    }
+    
+    .top-description p {
+        padding-left: 50px;
+        text-indent: 280px;
+        margin: 0;
+        width: 70%;
+        color: #EBEBEB;
+        font: 400 90px Inter, sans-serif;
+        line-height: 1.3em;
+        text-align: justify;
+    }
+    
+    .top-description .f-secondary {
+        color: #EBEBEB;
+        font: 400 80px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+            sans-serif;
+        line-height: 1.3em;
+    }
+    
+    .bottom-description {
+        padding-top: 170px;
+        justify-content: right;
+    }
+    
+    .bottom-description p {
+        padding-right: 50px;
+        text-indent: 580px;
+        margin: 0;
+        width: 55%;
+        color: #EBEBEB;
+        font: 400 90px Inter, sans-serif;
+        line-height: 1.3em;
+        text-align: right;
+    }
+    
+    .bottom-description .f-secondary {
+        color: #EBEBEB;
+        font: 400 80px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+            sans-serif;
+        line-height: 1.3em;
+    }
 }
 
-.top-description {
-    width: 65%;
-    display: flex;
-}
+.skills-display {
+    width: 100%;
+    margin-top: 200px;
 
-.circle {
-    position: absolute;
-    background-color: #EBEBEB;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    margin: 1.3em 0 0 50px;
-}
-
-.top-description p {
-    padding-left: 50px;
-    text-indent: 28 0px;
-    margin: 0;
-    width: 70%;
-    color: #EBEBEB;
-    font: 400 90px Inter, sans-serif;
-    line-height: 1.3em;
-    text-align: justify;
-}
-
-.top-description .f-secondary {
-    color: #EBEBEB;
-    font: 400 80px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
-    sans-serif;
-    line-height: 1.3em;
+    .top-skills-display, .bottom-skills-display {
+        display: flex;
+        position: relative;
+        margin: 0;
+    }
+    
+    .top-skills-display {
+        gap: 100px;
+        display: flex;
+        white-space: nowrap;
+        animation: scrollLeft 35s linear infinite;
+        margin-bottom: 15px;
+    }
+    
+    .bottom-skills-display {
+        gap: 100px;
+        display: flex;
+        white-space: nowrap;
+        animation: scrollRight 35s linear infinite;
+    }
+    
+    .top-skills-display p, .bottom-skills-display p {
+        color: #EBEBEB;
+        font: 400 50px Inter, sans-serif;
+        line-height: 1.3em;
+        margin: 0;
+    }
 }
 
 .footer {
+    display: flex;
     width: 100%;
+    justify-content: space-around;
+    margin-bottom: 50px;
+
+    .cv-content, .contact-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    
+    .cv-content p, .contact-content p {
+        font: 400 70px Inter, sans-serif;
+        color: #EBEBEB;
+    }
+    
+    .cv-button {
+        width: auto;
+        border: 4px solid #EBEBEB;
+        padding: 30px 70px;
+        border-radius: 100px;
+        transition: background-color 0.5s, color 0.5s;
+        font: 400 40px Inter, sans-serif;
+        color: #EBEBEB;
+        text-align: center;
+        text-decoration: none;
+        text-wrap: nowrap;
+    }
+    
+    .cv-button:hover {
+        background-color: #EBEBEB;
+        color: #1E1E1E;
+    }
+    
+    .contact-content .f-secondary {
+        font: 400 65px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+                sans-serif;
+        color: #EBEBEB;
+    }
+    
+    .contact-button {
+        background-color: #EBEBEB;
+        border: 4px solid #EBEBEB;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 70px;
+        cursor: pointer;
+        transition: background-color 0.5s, color 0.5s;
+    }
+    
+    .contact-button:hover {
+        background-color: #1E1E1E;
+        border: 4px solid #EBEBEB;
+    }
+    
+    .contact-button:hover p{
+        color: #EBEBEB;
+    }
+    
+    .contact-button p {
+        font: 400 40px Inter, sans-serif;
+        color: #1E1E1E;
+        text-decoration: none;
+        text-wrap: nowrap;
+        margin: 0;
+    }
+}
+
+/*.contact-button img {
+    margin-left: 10px;
+}*/
+
+.eop {
     font: 300 14px Inter, sans-serif;
     color: #EBEBEB;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: auto;
+    padding-bottom: 15px;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(calc(-100% - 20px));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1740px) {
+    .top-description {
+        width: 80%;
+    }
+
+    .top-description p {
+        text-indent: 200px;
+    }
+}
+
+@media screen and (min-width: 1741px) {
+    .top-description {
+        width: 65%;
+    }
 }
