@@ -50,7 +50,7 @@ export class ProjectComponent implements OnInit {
   navRightButton = './assets/img/buttons/right-button.png'
 
   projectLogo: any;
-  projectImages!: Project['images'];
+  projectImages: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -69,7 +69,6 @@ export class ProjectComponent implements OnInit {
         }
       });
     });
-
   }
 
   changeImage(index: number) {
