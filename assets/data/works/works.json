@@ -5,7 +5,7 @@
             "titleHeading": "FireWatcher",
             "titleSubheading":  "NASA Space Apps",
             "previewImg": "../../assets/img/works/2023/FireWatcher/preview-img.png",
-            "logo": "../../assets/img/works/2023/FireWatcher/logoFireWatcher.png",
+            "logo": "./assets/img/works/2023/FireWatcher/logoFireWatcher.png",
             "client": "NASA Space Apps Challenge",
             "type": "Hackathon",
             "year": 2023,
