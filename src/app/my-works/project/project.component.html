@@ -61,7 +61,7 @@
         </div>
         <div class="project-description" *ngIf="projectDescriptionTxt">
           <p>
-            <img src="../../../assets/img/init-dot.png" alt="init-dot">
+            <img [src]="initDot" alt="init-dot">
             {{ project.projectDescription }}
           </p>
         </div>
