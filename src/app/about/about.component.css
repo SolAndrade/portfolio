@@ -197,23 +197,16 @@ nav {
         padding: 30px 70px;
         cursor: pointer;
         transition: background-color 0.5s, color 0.5s;
+        font: 400 40px Inter, sans-serif;
+        color: #1E1E1E;
+        text-decoration: none;
+        text-wrap: nowrap;
     }
     
     .contact-button:hover {
         background-color: #1E1E1E;
         border: 4px solid #EBEBEB;
-    }
-    
-    .contact-button:hover p{
         color: #EBEBEB;
-    }
-    
-    .contact-button p {
-        font: 400 40px Inter, sans-serif;
-        color: #1E1E1E;
-        text-decoration: none;
-        text-wrap: nowrap;
-        margin: 0;
     }
 }
 
