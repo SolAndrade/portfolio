@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-
+  contactGif = './assets/img/home-girl.gif';
 }

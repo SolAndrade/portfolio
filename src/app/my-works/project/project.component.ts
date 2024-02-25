@@ -46,8 +46,9 @@ export class ProjectComponent implements OnInit {
   projectsRoute = './assets/data/works/works.json';
 
   navLeftButton = './assets/img/buttons/left-button.png';
-  navExitButton = './assets/img/buttons/exit-button.png'
-  navRightButton = './assets/img/buttons/right-button.png'
+  navExitButton = './assets/img/buttons/exit-button.png';
+  navRightButton = './assets/img/buttons/right-button.png';
+  initDot = './assets/img/init-dot.png';
 
   projectLogo: any;
   projectImages: any;
