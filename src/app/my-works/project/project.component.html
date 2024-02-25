@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <div class="project">
+  <div class="project" *ngIf="project">
     <header>
       <app-header></app-header>
     </header>
@@ -37,7 +37,7 @@
             </div>
           </div>
           <section class="project-details">
-            <img [src]="project.logo" alt="Project Logo">
+            <img [src]="projectLogo" alt="Project Logo">
             <section class="project-details-info">
               <div class="detail-section">
                 <p class="detail-type">Client:</p>
@@ -71,9 +71,9 @@
             {{ project.projectRoleDescription }}
           </p>
         </div>
-        <section class="project-images" *ngIf="project.images.length > 0">
+        <section class="project-images" *ngIf="projectImages.length > 0">
           <div [@imageSlide]="currentImageIndex" class="images" [ngClass]="{ 'active': currentImageIndex >= 0 }">
-            <img *ngIf="currentImageIndex >= 0" [src]="project.images[currentImageIndex]" alt="image">
+            <img *ngIf="currentImageIndex >= 0" [src]="projectImages[currentImageIndex]" alt="image">
           </div>
         </section>
       </section>

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { slideInAnimation } from 'src/app/animations';
+import { JsonResponse, Project } from 'src/app/models/project.model';
 import { WorksService } from 'src/app/services/works.service';
 
 @Component({
@@ -35,7 +36,7 @@ import { WorksService } from 'src/app/services/works.service';
 })
 export class ProjectComponent implements OnInit {
   navbarState = 'visible';
-  project: any;
+  project!: Project | undefined;
   currentImageIndex = 0;
   showMainInfo = true;
   activeRightButton = true;
@@ -48,6 +49,9 @@ export class ProjectComponent implements OnInit {
   navExitButton = './assets/img/buttons/exit-button.png'
   navRightButton = './assets/img/buttons/right-button.png'
 
+  projectLogo: any;
+  projectImages!: Project['images'];
+
   constructor(
     private route: ActivatedRoute,
     private worksService: WorksService,
@@ -57,12 +61,12 @@ export class ProjectComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       const projectId = params['id'];
-      /*this.worksService.getWorks2023().subscribe((data: any[]) => {
-        this.project = data.find((project) => project.titleHeading === projectId);
-      });*/
-      this._http.get<any>(this.projectsRoute).subscribe(data => {
+      this._http.get<any>(this.projectsRoute).subscribe((data: JsonResponse) => {
         this.project = data.works2023.find((project: { titleHeading: any; }) => project.titleHeading === projectId);
-        console.log(this.project);
+        if (this.project) {
+          this.projectLogo = this.project.logo;
+          this.projectImages = this.project.images;
+        }
       });
     });
 
@@ -73,10 +77,12 @@ export class ProjectComponent implements OnInit {
     const isHidden = this.navbarState === 'hidden';
     (index === 1 && isVisible) || (index === -1 && isHidden) ? this.toggleNavbarAnimation() : null;
 
-    this.currentImageIndex = (this.currentImageIndex + index + this.project.images.length) % this.project.images.length;
-    this.showMainInfo = this.currentImageIndex === 0;
-    this.projectDescriptionTxt = this.currentImageIndex === 1;
-    this.projectRoleDescriptionTxt = this.currentImageIndex === 2;
+    if (this.project) {
+      this.currentImageIndex = (this.currentImageIndex + index + this.project.images.length) % this.project.images.length;
+      this.showMainInfo = this.currentImageIndex === 0;
+      this.projectDescriptionTxt = this.currentImageIndex === 1;
+      this.projectRoleDescriptionTxt = this.currentImageIndex === 2;
+    }
   }
 
 
