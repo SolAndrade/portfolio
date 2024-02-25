@@ -1,6 +1,6 @@
 body {
     width: 100%;
-    background-color: #ebebeb;
+    background-color: #1E1E1E;
     margin: 0;
     padding: 0;
     max-height: 100%;
@@ -31,13 +31,13 @@ nav {
     position: absolute;
 }
 
-.title {
+/*.title {
     gap: 20px;
     display: flex;
     margin-top: 3%;
     
     .txt-my {
-        color: #000;
+        color: #EBEBEB;
         text-align: center;
         letter-spacing: -9px;
         font: 400 140px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
@@ -46,16 +46,16 @@ nav {
     
     .txt-section {
         padding-top: 20px;
-        color: #000;
+        color: #EBEBEB;
         text-align: center;
         letter-spacing: -4.8px;
         white-space: nowrap;
         margin: auto 0;
         font: 400 120px Inter, sans-serif;
     }
-}
+}*/
 
-.info {
+/*.info {
     margin-top: 15%;
     display: flex;
     flex-direction: column;
@@ -73,11 +73,56 @@ nav {
         font: 400 16px Inter, sans-serif;
         color: black;
     }
+}*/
+
+.about-me-img {
+    position: absolute;
+}
+
+.content {
+    z-index: 3;
+}
+
+.about-me-descriptions {
+
+}
+
+.top-description {
+    width: 65%;
+    display: flex;
+}
+
+.circle {
+    position: absolute;
+    background-color: #EBEBEB;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 1.3em 0 0 50px;
+}
+
+.top-description p {
+    padding-left: 50px;
+    text-indent: 28 0px;
+    margin: 0;
+    width: 70%;
+    color: #EBEBEB;
+    font: 400 90px Inter, sans-serif;
+    line-height: 1.3em;
+    text-align: justify;
+}
+
+.top-description .f-secondary {
+    color: #EBEBEB;
+    font: 400 80px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+    sans-serif;
+    line-height: 1.3em;
 }
 
 .footer {
     width: 100%;
     font: 300 14px Inter, sans-serif;
+    color: #EBEBEB;
     display: flex;
     justify-content: center;
     margin-top: auto;

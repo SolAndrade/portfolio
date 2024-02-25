@@ -10,24 +10,33 @@
 <body>
     <div class="about">
         <header>
-            <app-header></app-header>
+            <app-header [isWhite]="true"></app-header>
         </header>
-        <div class="title">
+        <nav>
+            <app-navbar [isWhite]="true"></app-navbar>
+        </nav>
+        <!--<div class="title">
             <div class="txt-my">
                 About
             </div>
             <div class="txt-section">
                 Me
             </div>
-        </div>
-        <nav>
-            <app-navbar></app-navbar>
-        </nav>
-        <div class="info">
+        </div>-->
+        <!--<div class="info">
             <a href="../../assets/data/CV Sol Andrade.pdf" download="SolAndrade.pdf" class="download-link">
                 Here is my CV, take a look!
             </a>
             <p class="fix">I'm currently working on this section, visit me again soon!</p>
+        </div>-->
+        <img class="about-me-img" [src]="aboutMeImg" alt="">
+        <div class="content">
+            <div class="about-me-descriptions">
+                <div class="top-description">
+                    <div class="circle"></div>
+                    <p>Been immersing into<span class="f-secondary"> PROGRAMMING </span>and<span class="f-secondary"> TECH </span>for over 5 years, I'm currently based in Málaga, Spain</p>
+                </div>
+            </div>
         </div>
         <p class="footer">just an ordinary designer</p>
     </div>
