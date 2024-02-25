@@ -11,7 +11,13 @@ import { ProjectsResolver } from './router/resolver/projects.resolver';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'works', component: MyWorksComponent },
+  {
+    path: 'works',
+    component: MyWorksComponent,
+    resolve: {
+      projectsData: ProjectsResolver,
+    }
+  },
   { path: 'about', component: AboutComponent },
   { path: 'playground', component: PlaygroundComponent },
   { path: 'contact', component: ContactComponent },
