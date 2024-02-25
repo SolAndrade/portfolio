@@ -3,8 +3,10 @@
         <ul class="nav-list" id="nav-list">
             <li class="nav-item" id="nav-item-work">
                 <a [routerLink]="['/works']" class="nav-link">
-                    <div class="nav-item-number">01</div>
-                    <div class="nav-item-title">Works</div>
+                    <div class="nav-item-number" *ngIf="!isWhite">01</div>
+                    <div class="nav-item-number-white" *ngIf="isWhite">01</div>
+                    <div class="nav-item-title" *ngIf="!isWhite">Works</div>
+                    <div class="nav-item-title-white" *ngIf="isWhite">Works</div>
                 </a>
                 <div class="title">
                     <div class="txt-start">
@@ -20,8 +22,10 @@
             </li>
             <li class="nav-item">
                 <a [routerLink]="['/about']" class="nav-link">
-                    <div class="nav-item-number">02</div>
-                    <div class="nav-item-title">About</div>
+                    <div class="nav-item-number" *ngIf="!isWhite">02</div>
+                    <div class="nav-item-number-white" *ngIf="isWhite">02</div>
+                    <div class="nav-item-title" *ngIf="!isWhite">About</div>
+                    <div class="nav-item-title-white" *ngIf="isWhite">About</div>
                 </a>
                 <div class="title">
                     <div class="txt-start">
@@ -37,8 +41,10 @@
             </li>
             <li class="nav-item">
                 <a [routerLink]="['/playground']" class="nav-link">
-                    <div class="nav-item-number">03</div>
-                    <div class="nav-item-title">Playground</div>
+                    <div class="nav-item-number" *ngIf="!isWhite">03</div>
+                    <div class="nav-item-number-white" *ngIf="isWhite">03</div>
+                    <div class="nav-item-title" *ngIf="!isWhite">Playground</div>
+                    <div class="nav-item-title-white" *ngIf="isWhite">Playground</div>
                 </a>
                 <div class="title">
                     <div class="txt-start">
@@ -59,8 +65,10 @@
             </li>
             <li class="nav-item">
                 <a [routerLink]="['/contact']" class="nav-link">
-                    <div class="nav-item-number">04</div>
-                    <div class="nav-item-title">Contact</div>
+                    <div class="nav-item-number" *ngIf="!isWhite">04</div>
+                    <div class="nav-item-number-white" *ngIf="isWhite">04</div>
+                    <div class="nav-item-title" *ngIf="!isWhite">Contact</div>
+                    <div class="nav-item-title-white" *ngIf="isWhite">Contact</div>
                 </a>
                 <div class="title">
                     <div class="txt-start">

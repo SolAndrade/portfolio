@@ -40,6 +40,7 @@ export class MyWorksComponent implements OnInit {
       this.projects2023 = data.works2023;
       this.projects2022 = data.works2022;
     });
+    console.log(this.projects2023);
     /*setTimeout(() => {
       this.loader = false;
       this.toggleAnimation();

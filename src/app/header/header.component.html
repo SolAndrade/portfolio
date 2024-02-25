@@ -1,4 +1,4 @@
-<header>
+<header *ngIf="!isWhite">
     <div class="header-txt">
         < Open for any <br />
         collaborations and offers />
@@ -7,6 +7,20 @@
         <a [routerLink]="['/home']">☀</a>
     </div>
     <div class="header-txt">
+        Folio
+        <br />
+        Vol.2 -
+    </div>
+</header>
+<header *ngIf="isWhite">
+    <div class="white-header-txt">
+        < Open for any <br />
+        collaborations and offers />
+    </div>
+    <div class="white-brand">
+        <a [routerLink]="['/home']">☀</a>
+    </div>
+    <div class="white-header-txt">
         Folio
         <br />
         Vol.2 -

@@ -71,9 +71,20 @@ nav:hover .nav-item-title {
   color: var(--home-nav-section-nbr, #6c6c6c);
   font: 300 14px Inter, sans-serif;
 }
+.nav-item-number-white {
+  color: #8f8f8f;
+  font: 300 14px Inter, sans-serif;
+}
 
 .nav-item-title {
   color: #000;
+  margin-top: 5px;
+  font: 400 16px Inter, sans-serif;
+  transition: color 0.6s ease;
+}
+
+.nav-item-title-white {
+  color: #EBEBEB;
   margin-top: 5px;
   font: 400 16px Inter, sans-serif;
   transition: color 0.6s ease;
