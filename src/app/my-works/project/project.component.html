@@ -11,10 +11,11 @@
     <header>
       <app-header></app-header>
     </header>
-    <nav [@navbarAnimation]="navbarState">
+    <nav [@navbarAnimation]="navbarState" [class.active]="isAnimationActive">
       <app-navbar (pageRedirect)="redirectNav($event)"></app-navbar>
     </nav>
-    <div class="nav-buttons">
+    <div class="nav-animation-bar" [class.active]="isAnimationActive" [class.disactive]="!isAnimationActive"></div>
+    <div class="nav-buttons" [class.active]="isAnimationActive">
       <a [ngClass]="{'disabled': currentImageIndex === 0}" (click)="changeImage(-1)">
         <img [src]="navLeftButton" alt="">
       </a>
@@ -27,7 +28,7 @@
     </div>
     <section class="scrolled-view">
       <section class="main-view">
-        <div class="main-project-details" *ngIf="showMainInfo === true">
+        <div class="main-project-details" *ngIf="showMainInfo === true" [class.active]="isAnimationActive">
           <div class="title">
             <div class="title-heading">
               <p>{{ project.titleHeading }}</p>

@@ -61,6 +61,7 @@ nav:hover .nav-item-title {
 }
 
 .nav-link {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: left;

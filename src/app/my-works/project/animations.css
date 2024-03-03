@@ -1,0 +1,42 @@
+.nav-animation-bar {
+    z-index: 3;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    transition: background 8.5s ease;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.nav-animation-bar::before,
+.nav-animation-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin: 50% 50%;
+    transform: scaleY(0);
+    transition: transform 1.6s ease;
+}
+
+.nav-animation-bar::before {
+    background: linear-gradient(to top, #000 0%, #000 50%, transparent 50%, transparent 100%);
+}
+
+.nav-animation-bar::after {
+    background: linear-gradient(to bottom, #000 0%, #000 60%, transparent 50%, transparent 100%);
+}
+
+.nav-animation-bar.active::before,
+.nav-animation-bar.active::after {
+    transform: scaleY(1);
+    z-index: 7;
+}
+
+.nav-animation-bar.disactive::before,
+.nav-animation-bar.disactive::after {
+    transform: scaleY(0);
+}

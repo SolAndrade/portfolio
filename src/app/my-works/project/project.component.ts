@@ -48,6 +48,8 @@ export class ProjectComponent implements OnInit {
   navRightButton = './assets/img/buttons/right-button.png';
   initDot = './assets/img/init-dot.png';
 
+  isAnimationActive: any;
+
   projectLogo: any;
   projectImages: any;
 
@@ -72,6 +74,7 @@ export class ProjectComponent implements OnInit {
   }
 
   redirectNav(page: any){
+    this.isAnimationActive = true;
     setTimeout(() => {
       this._router.navigate([page]);
     }, 2500);
