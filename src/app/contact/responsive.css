@@ -1,0 +1,46 @@
+@media screen and (max-width: 1400px) {
+    .title {
+        top: 5%;
+    
+        .txt-start {
+            font-size: 120px;
+        }
+    
+        .txt-end {
+            font-size: 100px;
+        }
+    }
+
+    .contact-content {
+
+        .contact-info {
+            gap: 10px 25%;
+    
+            .contact-info-section {
+                gap: 90px;
+            }
+        }
+    }
+
+    .image img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1740px) {
+    .title {
+        top: 4%;
+    
+        .txt-start {
+            font-size: 120px;
+        }
+    
+        .txt-end {
+            font-size: 100px;
+        }
+    }
+
+    .image img {
+        width: 400px;
+    }
+}

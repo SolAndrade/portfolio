@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css', './responsive.css']
 })
 export class ContactComponent implements OnInit {
   //contactGif = './assets/img/home-girl.gif';
