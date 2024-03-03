@@ -9,7 +9,7 @@ import { map } from 'rxjs';
 @Component({
   selector: 'app-my-works',
   templateUrl: './my-works.component.html',
-  styleUrls: ['./my-works.component.css']
+  styleUrls: ['./my-works.component.css', './responsive.css']
 })
 export class MyWorksComponent implements OnInit {
   projects2023: any[] = [];

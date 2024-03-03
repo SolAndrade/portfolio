@@ -1,0 +1,31 @@
+@media screen and (max-width: 1400px) {
+    .title {
+        margin-top: 8%;
+
+        .txt-my {
+            font-size: 150px;
+        }
+
+        .txt-section {
+            font-size: 140px;
+        }
+    }
+
+    .img {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 1740px) {
+    .title {
+        margin-top: 6%;
+
+        .txt-my {
+            font-size: 170px;
+        }
+
+        .txt-section {
+            font-size: 130px;
+        }
+    }
+}
