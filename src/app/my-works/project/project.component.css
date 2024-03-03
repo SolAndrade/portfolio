@@ -132,7 +132,6 @@ nav {
     width: 50vw;
     height: 100vh;
     max-width: 100%;
-    display: block;
     margin: 0 auto;
 }
 
@@ -209,4 +208,12 @@ nav.active {
 .nav-buttons.active,
 .main-project-details.active {
     z-index: 5;
+}
+
+@media screen and (min-width: 1741px) {
+    .project-images img {
+        max-width: 50vw;
+        max-height: 100vh;
+        object-fit: cover;
+    }
 }

@@ -41,7 +41,7 @@ export class MyWorksComponent implements OnInit {
   ngOnInit(): void {
     this._http.get<any>(this.projectsRoute).subscribe(data => {
       this.projects2023 = data.works2023;
-      this.projects2022 = data.works2022;
+      //this.projects2022 = data.works2022;
     });
     this.isAnimationActive = true;
     setTimeout(() => {

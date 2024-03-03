@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ProjectComponent } from './my-works/project/project.component';
+import { ToggleMenuComponent } from './about/toggle-menu/toggle-menu.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProjectComponent } from './my-works/project/project.component';
     PlaygroundComponent,
     ContactComponent,
     ProjectComponent,
+    ToggleMenuComponent
   ],
   imports: [
     BrowserModule,
