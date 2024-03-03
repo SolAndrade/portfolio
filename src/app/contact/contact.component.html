@@ -20,9 +20,10 @@
                 and create together
             </div>
         </div>
-        <nav>
-            <app-navbar></app-navbar>
+        <nav [class.display]="displayNav">
+            <app-navbar (pageRedirect)="redirectNav($event)"></app-navbar>
         </nav>
+        <div class="nav-animation-bar" [class.active]="isAnimationActive" [class.disactive]="!isAnimationActive"></div>
         <div class="contact-content">
             <div class="contact-info">
                 <div class="contact-info-section">

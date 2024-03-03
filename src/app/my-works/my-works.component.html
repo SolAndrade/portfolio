@@ -30,9 +30,10 @@
                 {{ titleEnd }}
             </div>
         </div>
-        <nav>
-            <app-navbar></app-navbar>
+        <nav [class.display]="displayNav">
+            <app-navbar (pageRedirect)="redirectNav($event)"></app-navbar>
         </nav>
+        <div class="nav-animation-bar" [class.active]="isAnimationActive"></div>
         <div class="works-index">
             <div class="works-nav">
                 <p class="works-year-txt" (click)="updateDisplay(2023)" [ngClass]="{ 'selected': year === 2023 }">2023</p>

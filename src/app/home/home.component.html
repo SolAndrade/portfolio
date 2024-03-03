@@ -21,13 +21,14 @@
       </div>
     </div>
     <nav>
-      <app-navbar></app-navbar>
+      <app-navbar (pageRedirect)="redirectNav($event)"></app-navbar>
     </nav>
+    <div class="nav-animation-bar" [class.active]="isAnimationActive"></div>
     <div class="image">
       <!--<img loading="lazy" src="../../assets/img/main-pfp.png" class="img"/>-->
       <img loading="lazy" [src]="img" class="img"/>
     </div>
-    <p class="footer">just an ordinary designer</p>
+    <p class="footer">just an ordinary designer and developer</p>
   </div>
 </body>
 

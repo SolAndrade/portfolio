@@ -65,6 +65,7 @@ nav:hover .nav-item-title {
   flex-direction: column;
   align-items: left;
   text-decoration: none;
+  transition: opacity 2.0s ease;
 }
 
 .nav-item-number {
@@ -95,17 +96,28 @@ nav:hover .nav-item-title {
   text-align: right;
   margin: auto 0;
   font: 400 12px Inter, sans-serif;
+  transition: opacity 2.0s ease;
 }
 
-.nav-item:hover .title {
+.nav-item:hover .title,
+.titleShown .title {
   display: flex;
+  opacity: 1;
 }
 
-.nav-item:not(:hover) .title {
+.hideTitle .title {
   opacity: 0;
 }
 
-.nav-item:not(:hover) .txt-start span,
-.nav-item:not(:hover) .txt-end span {
-  animation: disappear 0.5s forwards ease-in-out;
+.titleShown .txt-end,
+.titleShown .txt-start {
+  color: #EBEBEB;
+}
+
+.navHidden .nav-link {
+  opacity: 0;
+}
+
+.navHidden .nav-copyright {
+  opacity: 0;
 }

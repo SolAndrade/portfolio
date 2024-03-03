@@ -1,8 +1,8 @@
 <body>
-    <nav id="nav">
+    <nav id="nav" [ngClass]="{'navHidden': textShown}">
         <ul class="nav-list" id="nav-list">
-            <li class="nav-item" id="nav-item-work">
-                <a [routerLink]="['/works']" class="nav-link">
+            <li class="nav-item" [ngClass]="{'titleShown': textShown === '/works'}">
+                <a (click)="emitRedirection('/works')" class="nav-link">
                     <div class="nav-item-number" *ngIf="!isWhite">01</div>
                     <div class="nav-item-number-white" *ngIf="isWhite">01</div>
                     <div class="nav-item-title" *ngIf="!isWhite">Works</div>
@@ -20,8 +20,9 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
-                <a [routerLink]="['/about']" class="nav-link">
+            <li class="nav-item" [ngClass]="{'titleShown': textShown === '/about'}" [ngClass]="{'hideTitle': hideTitle}">
+                <!--<a [routerLink]="['/about']" class="nav-link">-->
+                <a class="nav-link" (click)="emitRedirection('/about')">
                     <div class="nav-item-number" *ngIf="!isWhite">02</div>
                     <div class="nav-item-number-white" *ngIf="isWhite">02</div>
                     <div class="nav-item-title" *ngIf="!isWhite">About</div>
@@ -39,8 +40,8 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
-                <a [routerLink]="['/playground']" class="nav-link">
+            <li class="nav-item" [ngClass]="{'titleShown': textShown === '/playground'}">
+                <a (click)="emitRedirection('/playground')" class="nav-link">
                     <div class="nav-item-number" *ngIf="!isWhite">03</div>
                     <div class="nav-item-number-white" *ngIf="isWhite">03</div>
                     <div class="nav-item-title" *ngIf="!isWhite">Playground</div>
@@ -63,8 +64,8 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
-                <a [routerLink]="['/contact']" class="nav-link">
+            <li class="nav-item" [ngClass]="{'titleShown': textShown === '/contact'}">
+                <a (click)="emitRedirection('/contact')" class="nav-link">
                     <div class="nav-item-number" *ngIf="!isWhite">04</div>
                     <div class="nav-item-number-white" *ngIf="isWhite">04</div>
                     <div class="nav-item-title" *ngIf="!isWhite">Contact</div>

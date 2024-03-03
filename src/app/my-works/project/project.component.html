@@ -12,7 +12,7 @@
       <app-header></app-header>
     </header>
     <nav [@navbarAnimation]="navbarState">
-      <app-navbar></app-navbar>
+      <app-navbar (pageRedirect)="redirectNav($event)"></app-navbar>
     </nav>
     <div class="nav-buttons">
       <a [ngClass]="{'disabled': currentImageIndex === 0}" (click)="changeImage(-1)">

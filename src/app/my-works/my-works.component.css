@@ -27,10 +27,65 @@ header,
 nav {
     width: 100%;
     align-self: stretch;
+    z-index: 5;
 }
 
 nav {
     position: absolute;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 2.0s ease;
+}
+
+.display {
+    opacity: 1;
+}
+
+.nav-animation-bar {
+    z-index: 3;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    transition: background 8.5s ease;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.nav-animation-bar::before,
+.nav-animation-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin: 50% 50%;
+    transform: scaleY(0);
+    transition: transform 1.6s ease;
+}
+
+.nav-animation-bar::before {
+    background: linear-gradient(to top, #000 0%, #000 50%, transparent 50%, transparent 100%);
+}
+
+.nav-animation-bar::after {
+    background: linear-gradient(to bottom, #000 0%, #000 60%, transparent 50%, transparent 100%);
+}
+
+.nav-animation-bar.active::before,
+.nav-animation-bar.active::after {
+    transform: scaleY(1);
+    z-index: 5;
+}
+
+.nav-animation-bar.disactive::before,
+.nav-animation-bar.disactive::after {
+    transform: scaleY(0);
+}
+
+.layerProjects {
+    z-index: 3;
 }
 
 .title {
@@ -69,6 +124,7 @@ nav {
     padding-left: 50px;
     bottom: 0;
     position: absolute;
+    z-index: 0;
 
     .works-nav {
         display: flex;
@@ -135,37 +191,34 @@ nav {
     font: 300 16px Inter, sans-serif;
 }
 
-/*.transition {
-    height: 100vh;
-    background-color: #000;
-    overflow: hidden;
+@media screen and (max-width: 1400px) {
+    .title {
+        margin-top: 8%;
+
+        .txt-my {
+            font-size: 150px;
+        }
+
+        .txt-section {
+            font-size: 140px;
+        }
+    }
+
+    .img {
+        width: 220px;
+    }
 }
 
-.title-transition {
-    display: flex;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    transition: background 0.5s ease;
+@media screen and (max-width: 1740px) {
+    .title {
+        margin-top: 6%;
 
-    .txt-my-transition {
-        color: #fff;
-        text-align: center;
-        font: 400 170px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
-            sans-serif;
-        overflow: hidden;
-        white-space: nowrap;
-    }
+        .txt-my {
+            font-size: 170px;
+        }
 
-    .txt-section-transition {
-        color: #fff;
-        text-align: center;
-        font: 400 190px Inter, sans-serif;
-        overflow: hidden;
-        white-space: nowrap;
+        .txt-section {
+            font-size: 130px;
+        }
     }
-}*/
+}

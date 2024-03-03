@@ -1,7 +1,7 @@
-import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { trigger, state, style, animate, transition, AnimationPlayer, AnimationBuilder } from '@angular/animations';
 import { WorksService } from '../services/works.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
 
@@ -24,12 +24,18 @@ export class MyWorksComponent implements OnInit {
   titleBegin: string = 'My';
   titleEnd: string = 'Works';
 
+  isAnimationActive: any;
+  layerProjects = false;
+  displayNav = false;
+
   constructor(
     private animationBuilder: AnimationBuilder,
     private _worksService: WorksService,
     private renderer: Renderer2,
     private _route: ActivatedRoute,
     private _http: HttpClient,
+    private _router: Router,
+    private _elRef: ElementRef,
   ) { }
 
   ngOnInit(): void {
@@ -37,10 +43,34 @@ export class MyWorksComponent implements OnInit {
       this.projects2023 = data.works2023;
       this.projects2022 = data.works2022;
     });
-    /*setTimeout(() => {
-      this.loader = false;
-      this.toggleAnimation();
-    }, 2000);*/
+    this.isAnimationActive = true;
+    setTimeout(() => {
+      this.isAnimationActive = false;
+    }, 50);
+    setTimeout(() => {
+      this.displayNav = true;
+    }, 1000);
+    setTimeout(() => {
+      const worksIndexElement = this._elRef.nativeElement.querySelector('.works-index');
+      if (worksIndexElement) {
+        this.renderer.setStyle(worksIndexElement, 'z-index', '5');
+      }
+    }, 1000);
+
+  }
+
+  redirectNav(page: any) {
+    if (page === '/works') {
+      return;
+    }
+    this.isAnimationActive = true;
+    const worksIndexElement = this._elRef.nativeElement.querySelector('.works-index');
+    if (worksIndexElement) {
+      this.renderer.setStyle(worksIndexElement, 'z-index', '0');
+    }
+    setTimeout(() => {
+      this._router.navigate([page]);
+    }, 2500);
   }
 
   updateDisplay(year: number) {

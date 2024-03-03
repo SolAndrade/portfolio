@@ -12,23 +12,10 @@
         <header>
             <app-header [isWhite]="true"></app-header>
         </header>
-        <nav>
-            <app-navbar [isWhite]="true"></app-navbar>
+        <nav [class.display]="displayNav">
+            <app-navbar [isWhite]="true" (pageRedirect)="redirectNav($event)"></app-navbar>
         </nav>
-        <!--<div class="title">
-            <div class="txt-my">
-                About
-            </div>
-            <div class="txt-section">
-                Me
-            </div>
-        </div>-->
-        <!--<div class="info">
-            <a href="../../assets/data/CV Sol Andrade.pdf" download="SolAndrade.pdf" class="download-link">
-                Here is my CV, take a look!
-            </a>
-            <p class="fix">I'm currently working on this section, visit me again soon!</p>
-        </div>-->
+        <div class="nav-animation-bar" [class.active]="isAnimationActive" [class.disactive]="!isAnimationActive"></div>
         <img class="about-me-img" [src]="aboutMeImg" alt="">
         <div class="content">
             <div class="about-me-descriptions">
@@ -62,7 +49,7 @@
                     </a>
                 </div>
                 <div class="contact-content" [routerLink]="['/contact']">
-                    <p>let's create <span class="f-secondary">together</span> :)</p>
+                    <p>let's create together :)</p>
                     <div class="contact-button">
                         contact me
                         <!--<img [src]="arrowDiagonal" alt="arrow-diagonal">-->
@@ -70,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <p class="eop">just an ordinary designer</p>
+        <p class="eop">just an ordinary designer and developer</p>
     </div>
 </body>
 

@@ -8,9 +8,9 @@ import { ProjectComponent } from './my-works/project/project.component';
 import { MyWorksComponent } from './my-works/my-works.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'works', component: MyWorksComponent },
+  { path: '', component: HomeComponent, data: { animationState: 'HomePage' } },
+  { path: 'home', component: HomeComponent, data: { animationState: 'HomePage' } },
+  { path: 'works', component: MyWorksComponent, data: { animationState: 'WorksPage' }  },
   { path: 'about', component: AboutComponent },
   { path: 'playground', component: PlaygroundComponent },
   { path: 'contact', component: ContactComponent },
