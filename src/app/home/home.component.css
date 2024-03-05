@@ -36,7 +36,7 @@ nav {
   gap: 20px;
   display: flex;
   margin-top: 20px;
-  
+
   .txt-my {
     color: #000;
     text-align: center;
@@ -44,7 +44,7 @@ nav {
     font: 400 200px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
       sans-serif;
   }
-  
+
   .txt-section {
     padding-top: 20px;
     color: #000;
@@ -122,12 +122,67 @@ nav {
     .txt-my {
       font-size: 150px;
     }
-    
+
     .txt-section {
       font-size: 140px;
     }
   }
+
   .image img {
     width: 350px;
+  }
+
+  .mobile-responsive {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 1740px) {
+  .title {
+    margin-top: 0px;
+
+    .txt-my {
+      font-size: 180px;
+    }
+
+    .txt-section {
+      font-size: 160px;
+    }
+  }
+
+  .image img {
+    width: 380px;
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  .mobile-responsive {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-responsive p {
+    padding: 0 20px;
+    color: #EBEBEB;
+    text-align: center;
+    margin: auto 0;
+    font: 400 24px Inter, sans-serif;
+  }
+
+  .f-secondary {
+    text-align: center;
+    font: 400 26px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+      sans-serif;
   }
 }

@@ -14,7 +14,7 @@
 .txt-start {
     color: grey;
     text-align: center;
-    font: 400 170px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+    font: 400 150px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
         sans-serif;
     overflow: hidden;
     white-space: nowrap;
@@ -24,7 +24,7 @@
 .txt-end {
     color: grey;
     text-align: center;
-    font: 400 190px Inter, sans-serif;
+    font: 400 170px Inter, sans-serif;
     overflow: hidden;
     white-space: nowrap;
     transition: color 2.0s ease;
