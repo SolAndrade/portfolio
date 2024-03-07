@@ -23,6 +23,7 @@
     <nav>
       <app-navbar (pageRedirect)="redirectNav($event)"></app-navbar>
     </nav>
+    <img [src]="pixel"/>
     <div class="nav-animation-bar" [class.active]="isAnimationActive"></div>
     <div class="image">
       <!--<img loading="lazy" src="../../assets/img/main-pfp.png" class="img"/>-->

@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   img = './assets/img/playground.gif';
+  pixel = 'https://tracker.metricool.com/c3po.jpg?hash=3d3cb2aef5b0cf00957091f44722546e';
   isAnimationActive = false;
 
   constructor(
