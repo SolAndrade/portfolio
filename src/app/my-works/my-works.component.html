@@ -7,11 +7,11 @@
     <title>Works</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-98EDVRLBCB"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-98EDVRLBCB');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-98EDVRLBCB');
     </script>
 </head>
 
@@ -59,8 +59,7 @@
                                     (mouseover)="handleHover('img' + project.titleHeading, project.titleHeading)" />
                             </a>
                         </div>
-                        <div class="projects-nbr" *ngIf="projects2024.length > 1">{{ projects2024.length }} projects</div>
-                        <div class="projects-nbr" *ngIf="projects2024.length == 1">{{ projects2024.length }} project</div>
+                        <div class="projects-nbr">{{ projects2024.length }} project</div>
                     </div>
                 </div>
                 <div class="works-year">
@@ -73,10 +72,10 @@
                                     (mouseover)="handleHover('img' + project.titleHeading, project.titleHeading)" />
                             </a>
                         </div>
-                        <div class="projects-nbr" *ngIf="projects2023.length > 1">{{ projects2023.length }} projects</div>
-                        <div class="projects-nbr" *ngIf="projects2023.length == 1">{{ projects2023.length }} project</div>                    </div>
+                        <div class="projects-nbr">{{ projects2023.length }} projects</div>
+                    </div>
                 </div>
-                <div class="works-year" *ngIf="projects2022">
+                <!--<div class="works-year">
                     <p class="works-year-txt">2022</p>
                     <div class="works-preview" id="works-preview" (mouseout)="handleUnhover()">
                         <div *ngFor="let project of projects2022" class="work-preview-item">
@@ -86,10 +85,9 @@
                                     (mouseover)="handleHover('img' + project.titleHeading, project.titleHeading)" />
                             </a>
                         </div>
-                        <div class="projects-nbr" *ngIf="projects2022.length > 1">{{ projects2022.length }} projects</div>
-                        <div class="projects-nbr" *ngIf="projects2022.length == 1">{{ projects2022.length }} project</div>
+                        <div class="projects-nbr">{{ projects2022.length }} projects</div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
