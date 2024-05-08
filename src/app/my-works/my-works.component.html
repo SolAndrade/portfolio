@@ -76,7 +76,7 @@
                         <div class="projects-nbr" *ngIf="projects2023.length > 1">{{ projects2023.length }} projects</div>
                         <div class="projects-nbr" *ngIf="projects2023.length == 1">{{ projects2023.length }} project</div>                    </div>
                 </div>
-                <div class="works-year" *ngIf="projects2022.length">
+                <div class="works-year" *ngIf="projects2022">
                     <p class="works-year-txt">2022</p>
                     <div class="works-preview" id="works-preview" (mouseout)="handleUnhover()">
                         <div *ngFor="let project of projects2022" class="work-preview-item">
