@@ -4,6 +4,7 @@ import { WorksService } from '../services/works.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
+import { Project } from '../models/project.model';
 
 
 @Component({
@@ -12,12 +13,14 @@ import { map } from 'rxjs';
   styleUrls: ['./my-works.component.css', './responsive.css', './animations.css']
 })
 export class MyWorksComponent implements OnInit {
-  projects2023: any[] = [];
-  projects2022: any[] = [];
+  projects2024: Project[] = [];
+  projects2023: Project[] = [];
+  projects2022: Project[] = [];
   projectsDisplay: any[] = [];
+  projects: any;
   projectsRoute = './assets/data/works/works.json';
 
-  year = 2023;
+  year = 2024;
 
   @ViewChild('titleContainer') titleContainer: any;
 
@@ -40,6 +43,8 @@ export class MyWorksComponent implements OnInit {
 
   ngOnInit(): void {
     this._http.get<any>(this.projectsRoute).subscribe(data => {
+      this.projects = data;
+      this.projects2024 = data.works2024;
       this.projects2023 = data.works2023;
       //this.projects2022 = data.works2022;
     });
@@ -77,14 +82,14 @@ export class MyWorksComponent implements OnInit {
     this.year = year;
   }
 
-  handleHover(imageId: string): void {
+  handleHover(imageId: string, project: string): void {
     const images = document.querySelectorAll('.img');
 
     if (images) {
       images.forEach(img => {
         if (img.id === imageId) {
           this.renderer.removeClass(img, 'grayscale');
-          this.updateTitle(imageId);
+          this.updateTitle(project);
         } else {
           this.renderer.addClass(img, 'grayscale');
         }
@@ -104,30 +109,17 @@ export class MyWorksComponent implements OnInit {
     }
   }
 
-  private updateTitle(imageId: string): void {
-    switch (imageId) {
-      case 'img42':
-        this.titleBegin = '42';
-        this.titleEnd = 'OpenCyber';
-        break;
-      case 'imgOpenTechies':
-        this.titleBegin = 'Open';
-        this.titleEnd = 'Techies';
-        break;
-      case 'imgFireWatcher':
-        this.titleBegin = 'Fire';
-        this.titleEnd = 'Watcher';
-        break;
-      case 'imgAbsences system':
-        this.titleBegin = 'H';
-        this.titleEnd = 'ickathon';
-        break;
-      case 'imgReBranding':
-        this.titleBegin = 'Re';
-        this.titleEnd = 'Branding';
-        break;
-      default:
-        break;
+  private updateTitle(projectTitle: string): void {
+    for (const year in this.projects) {
+      if (this.projects.hasOwnProperty(year)) {
+        const projects = this.projects[year];
+        const project = projects.find((p: Project) => p.titleHeading === projectTitle);
+        if (project) {
+          this.titleBegin = project.titleBegin;
+          this.titleEnd = project.titleEnd;
+          break;
+        }
+      }
     }
   }
 }

@@ -15,6 +15,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ProjectComponent } from './my-works/project/project.component';
 import { ToggleMenuComponent } from './about/toggle-menu/toggle-menu.component';
+import { TheProcessComponent } from './about/the-process/the-process.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ToggleMenuComponent } from './about/toggle-menu/toggle-menu.component';
     PlaygroundComponent,
     ContactComponent,
     ProjectComponent,
-    ToggleMenuComponent
+    ToggleMenuComponent,
+    TheProcessComponent
   ],
   imports: [
     BrowserModule,

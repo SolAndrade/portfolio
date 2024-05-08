@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "titleHeading": "Logo Redesign",
+        "titleSubheading": "Logistics",
+        "previewImg": "../../assets/img/works/2024/ReBranding/main-img.jpg",
+        "logo": "../../assets/img/works/2024/ReBranding/logo.png",
+        "client": "Transporte El Pampero & Servicios Logísticos",
+        "type": "",
+        "year": 2024,
+        "role": "Graphic Designer",
+        "projectDescription": "This Hackathon challenge was to implement an absences management web system in 40 hours. As a solution I Developed a robust system for employees and managers. Utilized HTML, CSS, JavaScript, GIT, NodeJS, Express, AngularJS, and MySQL Workbench. The outcome: Streamlined absence management, showcasing proficiency in diverse technologies and earning a finalist position in the Hicron Hackathon.",
+        "projectRoleDescription": "I developed an Absences Management Web System. My role included implementing the system using HTML, CSS, JavaScript, GIT, NodeJS, Express, AngularJS, and MySQL Workbench. Our collaborative effort resulted in a finalist position, demonstrating the effective use of diverse technologies to streamline absence management within the given time frame.",
+        "images": [
+            "../../assets/img/works/2024/Rebranding/main-img.jpg",
+            "../../assets/img/works/2024/ReBranding/image-two.png"
+        ],
+        "link": ""
+    }
+]

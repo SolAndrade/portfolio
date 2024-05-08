@@ -1,0 +1,105 @@
+.process-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    color: #EBEBEB;
+
+    .process-heading {
+        display: flex;
+        width: 100%;
+        gap: 5%;
+
+        .the-process {
+            display: flex;
+            align-items: right;
+            justify-content: right;
+            width: 20%;
+            font: 400 50px Inter, sans-serif;
+            margin: 10px 0 0;
+            text-wrap: nowrap;
+        }
+
+        .creation-txt-container {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+
+            .creation-txt {
+                margin: 0;
+                font: 400 100px Inter, sans-serif;
+                line-height: 75px;
+            }
+        }
+
+        .f-secondary {
+            color: #EBEBEB;
+            font: 400 90px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+                sans-serif;
+        }
+    }
+
+    .steps-container {
+        width: 100%;
+        display: flex;
+        gap: 5%;
+
+        .step-nbr-container {
+            display: flex;
+            align-items: right;
+            justify-content: right;
+            width: 20%;
+
+            .step-nbr {
+                font: 300 80px Inter, sans-serif;
+                margin: 0;
+            }
+        }
+
+        .steps-items {
+            width: 75%;
+            display: flex;
+            margin-top: 45px;
+            flex-direction: column;
+            gap: 60px;
+
+        }
+
+    }
+}
+
+.step {
+    display: flex;
+    
+}
+
+.step-title {
+    color: #565656;
+    width: 22%;
+    margin: 0;
+    font: 400 35px Inter, sans-serif;
+}
+
+.step-description {
+    width: 60%;
+    margin: 10px 0 0;
+    font: 300 22px Inter, sans-serif;
+    display: none;
+}
+
+.active {
+    color: #EBEBEB;
+}
+
+.displayDescription {
+    display: block;
+    /*gap: 5px;*/
+
+    .f-secondary {
+        letter-spacing: 1.5px;
+        margin: 0;
+        font: 300 20px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+            sans-serif;
+    }
+}
+

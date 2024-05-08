@@ -52,6 +52,8 @@ export class ProjectComponent implements OnInit {
 
   projectLogo: any;
   projectImages: any;
+  isologo: any;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -63,9 +65,13 @@ export class ProjectComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       const projectId = params['id'];
-      this._http.get<any>(this.projectsRoute).subscribe((data: JsonResponse) => {
-        this.project = data.works2023.find((project: { titleHeading: any; }) => project.titleHeading === projectId);
+      this._http.get<any>(this.projectsRoute).subscribe(data => {
+        this.project = data.works2024.find((project: { titleHeading: any; }) => project.titleHeading === projectId);
+        if (!this.project) {
+          this.project = data.works2023.find((project: { titleHeading: any; }) => project.titleHeading === projectId);
+        }
         if (this.project) {
+          this.isologo = this.project.isologo;
           this.projectLogo = this.project.logo;
           this.projectImages = this.project.images;
         }

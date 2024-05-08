@@ -81,24 +81,35 @@ nav {
     padding-left: 50px;
     bottom: 0;
     position: absolute;
+    max-width: 95%;
+    overflow-y: auto;
     z-index: 0;
+    margin-bottom: 8px;
 
-    .works-nav {
+    .works-projects {
+        display: flex;
+        gap: 20px;
+    }
+
+    .works-year-txt {
+        font: 400 16px Inter, sans-serif;
+        color: black;
+    }
+
+    /*.works-nav {
         display: flex;
         gap: 20px;
 
-        .works-year-txt {
-            font: 400 16px Inter, sans-serif;
-            color: #6c6c6c;
-        }
 
         .selected {
             color: black;
             font-weight: 500;
         }
-    }
+    }*/
 
     .works-year {
+        display: flex;
+        flex-direction: column;
         align-self: left;
         margin-bottom: 10px;
         padding: 0;
@@ -146,4 +157,18 @@ nav {
     align-self: stretch;
     white-space: nowrap;
     font: 300 16px Inter, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ebebeb;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cecbcb;
+    border-radius: 15px;
 }

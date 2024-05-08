@@ -81,10 +81,15 @@
           </p>
         </div>
         <section class="project-images" *ngIf="projectImages.length > 0">
-          <div [@imageSlide]="currentImageIndex" class="images" [ngClass]="{ 'active': currentImageIndex >= 0 }">
+          <div class="images" [ngClass]="{ 'active': currentImageIndex >= 0 }">
             <img *ngIf="currentImageIndex >= 0" [src]="projectImages[currentImageIndex]" alt="image">
           </div>
         </section>
+        <!--<section class="isologo-container">
+          <div class="isologo">
+            <img [src]="isologo" alt="image">
+          </div>
+        </section>-->
       </section>
     </section>
   </div>

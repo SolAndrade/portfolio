@@ -1,4 +1,27 @@
 {
+    "works2024": [
+        {
+            "id": 1,
+            "titleHeading": "Logo Redesign",
+            "titleSubheading": "Logistics",
+            "previewImg": "./assets/img/works/2024/ReBranding/main-img.jpg",
+            "logo": "./assets/img/works/2024/ReBranding/logos.png",
+            "client": "Transporte El Pampero & Servicios Logísticos",
+            "type": "",
+            "year": 2024,
+            "role": "Graphic Designer",
+            "projectDescription": "Tasked with revitalizing the brand identities of Transporte El Pampero and Servicios Logísticos, I embarked on a logo redesign journey. Infusing a box motif to signify efficiency and organization, I crafted sleek logos using Figma, Adobe Illustrator and Adobe PHotoshop. The outcome: Two modern identities reflecting the companies' commitment to seamless logistics.",
+            "projectRoleDescription": "In this project, I led the redesign of Transporte El Pampero and Servicios Logísticos' logos. Employing Figma, Adobe Illustrator and Adobe Photoshop, I incorporated a box theme, symbolizing efficiency. Collaborating closely with the team, I ensured the designs aligned with the companies' ethos and industry trends, resulting in refreshed brand identities ready to make an impact.",
+            "images": [
+                "./assets/img/works/2024/ReBranding/main-img.jpg",
+                "./assets/img/works/2024/ReBranding/image-three.png",
+                "./assets/img/works/2024/ReBranding/image-two.jpg"
+            ],
+            "link": "",
+            "titleBegin": "Logo",
+            "titleEnd": "Redesign"
+        }
+    ],
     "works2023": [
         {
             "id": 1,
@@ -17,7 +40,9 @@
                 "./assets/img/works/2023/FireWatcher/image-one.png",
                 "./assets/img/works/2023/FireWatcher/image-three.png"
             ],
-            "link": "https://www.spaceappschallenge.org/2023/find-a-team/virtual-black-hole/?tab=details"
+            "link": "https://www.spaceappschallenge.org/2023/find-a-team/virtual-black-hole/?tab=details",
+            "titleBegin": "Fire",
+            "titleEnd": "Watcher"
         },
         {
             "id": 2,
@@ -35,7 +60,9 @@
                 "./assets/img/works/2023/42Tech2Peer/image-one.png",
                 "./assets/img/works/2023/42Tech2Peer/main-img.png",
                 "./assets/img/works/2023/42Tech2Peer/image-three.png"
-            ]
+            ],
+            "titleBegin": "42",
+            "titleEnd": "OpenCyber"
         },
         {
             "id": 3,
@@ -54,7 +81,9 @@
                 "./assets/img/works/2023/OpenTechies/main-img.png",
                 "./assets/img/works/2023/OpenTechies/image-two.png"
             ],
-            "link": "https://github.com/SolAndrade/CloselyOpenTechies"
+            "link": "https://github.com/SolAndrade/CloselyOpenTechies",
+            "titleBegin": "Open",
+            "titleEnd": "Techies"
         },
         {
             "id": 4,
@@ -72,7 +101,9 @@
                 "./assets/img/works/2023/Hickathon/image-one.png",
                 "./assets/img/works/2023/Hickathon/image-two.png"
             ],
-            "link": "https://github.com/SolAndrade/Hickathon"
+            "link": "https://github.com/SolAndrade/Hickathon",
+            "titleBegin": "H",
+            "titleEnd": "ickathon"
         }
     ],
     "works2022": [

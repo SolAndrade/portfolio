@@ -1,0 +1,32 @@
+<article class="process-container">
+  <section class="process-heading">
+    <p class="the-process">The process.</p>
+    <div class="creation-txt-container">
+      <p class="creation-txt">Crafting a <span class="f-secondary">creation</span>,</p>
+      <p class="creation-txt">one step at a time.</p>
+    </div>
+  </section>
+  <section class="steps-container">
+    <div class="step-nbr-container">
+      <p class="step-nbr">0{{ stepNbr }}/</p>
+    </div>
+    <div class="steps-items">
+      <div class="step">
+        <p class="step-title" (click)="changeStep(1)" [ngClass]="{ 'active': stepNbr === 1 }">Brainstorming</p>
+        <p class="step-description" [ngClass]="{ 'displayDescription': stepNbr === 1 }">This is where the <span class="f-secondary">magic</span> happens. Throwing around ideas, <span class="f-secondary">dreaming big</span>, and figuring out what's possible.</p>
+      </div>
+      <div class="step">
+        <p class="step-title" (click)="changeStep(2)" [ngClass]="{ 'active': stepNbr === 2 }">Designing</p>
+        <p class="step-description" [ngClass]="{ 'displayDescription': stepNbr === 2 }">Time to put those wild <span class="f-secondary">ideas</span> into a plan. Sketch it out, make some <span class="f-secondary">blueprints</span>, and get ready to bring it to life.</p>
+      </div>
+      <div class="step">
+        <p class="step-title" (click)="changeStep(3)" [ngClass]="{ 'active': stepNbr === 3 }">Crafting</p>
+        <p class="step-description" [ngClass]="{ 'displayDescription': stepNbr === 3 }">Dive into the tech side of things and start <span class="f-secondary">coding</span>, building, or whatever the digital craft entails. This is where the <span class="f-secondary">creation</span> starts coming together in the digital realm.</p>
+      </div>
+      <div class="step">
+        <p class="step-title" (click)="changeStep(4)" [ngClass]="{ 'active': stepNbr === 4 }">Improving</p>
+        <p class="step-description" [ngClass]="{ 'displayDescription': stepNbr === 4 }">Step back, take a breath, and see what's <span class="f-secondary">working</span> and what needs tweaking. Gather feedback, make some changes, and polish it up until it's just right.</p>
+      </div>
+    </div>
+  </section>
+</article>

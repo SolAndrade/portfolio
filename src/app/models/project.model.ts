@@ -11,7 +11,10 @@ export interface Project {
     projectDescription: string;
     projectRoleDescription: string;
     images: string[];
+    isologo: string;
     link: string;
+    titleBegin: string;
+    titleEnd: string;
 }
 
 export interface JsonResponse {
