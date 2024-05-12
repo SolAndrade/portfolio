@@ -1,0 +1,134 @@
+@media screen and (max-width: 1740px) {
+    .title {
+        margin-top: 0px;
+
+        .txt-my {
+            font-size: 180px;
+        }
+
+        .txt-section {
+            font-size: 160px;
+        }
+    }
+
+    .image img {
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .title {
+        margin-top: 0px;
+
+        .txt-my {
+            font-size: 150px;
+        }
+
+        .txt-section {
+            font-size: 140px;
+        }
+    }
+
+    .image img {
+        width: 350px;
+    }
+}
+
+
+@media screen and (max-width: 1280px) {
+    .title {
+        margin-top: 0px;
+
+        .txt-my {
+            font-size: 140px;
+        }
+
+        .txt-section {
+            font-size: 120px;
+        }
+    }
+
+    .image img {
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .mobile-responsive {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+
+@media screen and (max-width: 990px) {
+    .nav-animation-bar {
+        display: none;
+    }
+
+    .title {
+        flex-direction: column;
+        margin-top: 40px;
+
+        .txt-my {
+            font-size: 120px;
+        }
+
+        .txt-section {
+            font-size: 70px;
+            margin-top: -70px;
+        }
+    }
+
+    nav {
+        display: none;
+    }
+
+    .fact {
+        display: flex;
+        position: absolute;
+        text-align: center;
+        font: 400 18px Inter, sans-serif;
+        margin: 0 40px;
+    }
+
+    .image {
+        margin-bottom: 140px;
+        width: 500px;
+    }
+
+    .footer {
+        margin-bottom: 70px;
+    }
+
+
+
+
+    /*.mobile-responsive {
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1000;
+        background-color: #1e1e1e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-responsive p {
+        padding: 0 20px;
+        color: #EBEBEB;
+        text-align: center;
+        margin: auto 0;
+        font: 400 24px Inter, sans-serif;
+    }
+
+    .f-secondary {
+        text-align: center;
+        font: 400 26px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
+            sans-serif;
+    }*/
+}
