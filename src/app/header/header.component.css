@@ -55,13 +55,13 @@ header {
 @media screen and (max-width: 450px) {
     .left-header-txt, .white-left-header-txt {
         font-size: 10px;
-        margin: 0 0 0 50px;
+        margin: 0 0 0 40px;
     }
 
     .brand, .white-brand {
         position: relative;
         width: auto;
-        padding-left: 60px;
+        padding-left: 80px;
     }
 
     .burger-menu {
@@ -69,7 +69,7 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-right: 50px;
+        margin-right: 40px;
 
         .burger-line {
             background-color: black;
