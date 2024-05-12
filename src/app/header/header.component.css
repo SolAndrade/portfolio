@@ -2,10 +2,11 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+    align-items: center;
 }
 
 
-.header-txt {
+.left-header-txt, .right-header-txt {
     margin: 0px 50px;
     color: #000;
     text-align: right;
@@ -25,7 +26,8 @@ header {
     text-decoration: none;
 }
 
-.white-header-txt {
+.white-left-header-txt, .white-right-header-txt {
+    display: flex;
     margin: 0px 50px;
     color: #EBEBEB;
     text-align: right;
@@ -44,4 +46,45 @@ header {
 .white-brand a {
     color: #EBEBEB;
     text-decoration: none;
+}
+
+.burger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .left-header-txt, .white-left-header-txt {
+        font-size: 10px;
+        margin: 0 0 0 50px;
+    }
+
+    .brand, .white-brand {
+        position: relative;
+        width: auto;
+        padding-left: 60px;
+    }
+
+    .burger-menu {
+        height: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 50px;
+
+        .burger-line {
+            background-color: black;
+            height: 3px;
+            width: 30px;
+        }
+
+        .white-burger-line {
+            background-color: white;
+            height: 3px;
+            width: 30px;
+        }
+    }
+
+    .right-header-txt, .white-right-header-txt {
+        display: none;
+    }
 }

@@ -1,28 +1,36 @@
 <header *ngIf="!isWhite">
-    <div class="header-txt">
+    <div class="left-header-txt">
         < Open for any <br />
         collaborations and offers />
     </div>
     <div class="brand">
         <a [routerLink]="['/home']">☀</a>
     </div>
-    <div class="header-txt">
+    <div class="right-header-txt">
         Folio
         <br />
         Vol.2 -
     </div>
+    <div class="burger-menu">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
 </header>
 <header *ngIf="isWhite">
-    <div class="white-header-txt">
+    <div class="white-left-header-txt">
         < Open for any <br />
         collaborations and offers />
     </div>
     <div class="white-brand">
         <a [routerLink]="['/home']">☀</a>
     </div>
-    <div class="white-header-txt">
+    <div class="white-right-header-txt">
         Folio
         <br />
         Vol.2 -
+    </div>
+    <div class="burger-menu">
+        <div class="white-burger-line"></div>
+        <div class="white-burger-line"></div>
     </div>
 </header>
