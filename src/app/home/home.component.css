@@ -76,6 +76,7 @@ nav {
   display: flex;
   justify-content: center;
   margin-top: auto;
+  transition: color 4s ease;
 }
 
 .nav-animation-bar {
@@ -117,4 +118,66 @@ nav {
 
 .fact {
   display: none;
+}
+
+.menu {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  display: flex;
+  position: absolute;
+  margin-bottom: 100px;
+  z-index: 4;
+  width: 100%;
+  justify-content: right;
+  padding-right: 80px;
+}
+
+.menu-animation-bar {
+  z-index: 3;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  transition: background 6s ease;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+
+.menu-animation-bar::before,
+.menu-animation-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: 100% 0%;
+  transform: scaleY(0);
+  transition: transform 1.6s ease;
+}
+
+.menu-animation-bar::before {
+  background: linear-gradient(to top, #000 0%, #000 50%, transparent 50%, transparent 100%);
+}
+
+.menu-animation-bar::after {
+  background: linear-gradient(to bottom, #000 0%, #000 60%, transparent 50%, transparent 100%);
+}
+
+.menu-animation-bar.active::before,
+.menu-animation-bar.active::after {
+  transform: scaleY(1);
+}
+
+.menu-animation-bar.active .footer {
+  color: white;
+  z-index: 4;
+}
+
+.footer.active {
+  color: white;
+  z-index: 4;
+}
+.menu.active {
+  opacity: 1;
 }
