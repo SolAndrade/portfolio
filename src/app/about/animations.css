@@ -3,7 +3,7 @@
     display: flex;
     align-self: center;
     justify-content: center;
-    transition: background 8.5s ease;
+    transition: background 6s ease;
     position: fixed;
     height: 100vh;
     width: 100%;

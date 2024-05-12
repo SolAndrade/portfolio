@@ -43,7 +43,7 @@ nav {
     display: flex;
     align-self: center;
     justify-content: center;
-    transition: background 8.5s ease;
+    transition: background 6s ease;
     position: absolute;
     height: 100vh;
     width: 100%;
@@ -143,6 +143,21 @@ p {
     margin-top: auto;
 }
 
+
+@media screen and (max-width: 1740px) {
+    p {
+        font-size: 20px;
+    }
+
+    .info {
+        margin-top: 30%;
+    }
+
+    .fix {
+        margin-top: 2%;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .title {
         margin-top: 8%;
@@ -169,9 +184,21 @@ p {
     }
 }
 
-@media screen and (max-width: 1740px) {
+@media screen and (max-width: 1280px) {
+    .title {
+        margin-top: 6%;
+
+        .txt-my {
+            font-size: 140px;
+        }
+
+        .txt-section {
+            font-size: 120px;
+        }
+    }
+
     p {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .info {
@@ -179,6 +206,6 @@ p {
     }
 
     .fix {
-        margin-top: 2%;
+        margin-top: 3%;
     }
 }

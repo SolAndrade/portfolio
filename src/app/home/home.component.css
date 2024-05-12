@@ -83,7 +83,7 @@ nav {
   display: flex;
   align-self: center;
   justify-content: center;
-  transition: background 8.5s ease;
+  transition: background 6s ease;
   position: absolute;
   height: 100vh;
   width: 100%;
@@ -115,6 +115,24 @@ nav {
   transform: scaleY(1);
 }
 
+@media screen and (max-width: 1740px) {
+  .title {
+    margin-top: 0px;
+
+    .txt-my {
+      font-size: 180px;
+    }
+
+    .txt-section {
+      font-size: 160px;
+    }
+  }
+
+  .image img {
+    width: 380px;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .title {
     margin-top: 0px;
@@ -138,21 +156,27 @@ nav {
   }
 }
 
-@media screen and (max-width: 1740px) {
+
+@media screen and (max-width: 1280px) {
   .title {
     margin-top: 0px;
 
     .txt-my {
-      font-size: 180px;
+      font-size: 140px;
     }
 
     .txt-section {
-      font-size: 160px;
+      font-size: 120px;
     }
   }
 
   .image img {
-    width: 380px;
+    width: 320px;
+  }
+
+  .mobile-responsive {
+    opacity: 0;
+    z-index: -1;
   }
 }
 

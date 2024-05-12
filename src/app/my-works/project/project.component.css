@@ -39,12 +39,6 @@ nav {
     opacity: 0.5;
 }
 
-.title {
-    margin-top: 60px;
-    text-align: left;
-    padding: 10px;
-}
-
 .main-view {
     display: flex;
     width: 100%;
@@ -59,6 +53,9 @@ nav {
 }
 
 .title {
+    margin-top: 60px;
+    text-align: left;
+    padding: 10px;
     padding-left: 50px;
 }
 
@@ -66,6 +63,7 @@ nav {
     font: 400 110px 'Shadows Into Light Two', -apple-system, Roboto, Helvetica,
         sans-serif;
     margin: 0;
+    text-wrap: nowrap;
 }
 
 .title-subheading {
@@ -230,5 +228,37 @@ nav.active {
     }
     nav {
         top: 40%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .project-details {
+        margin-top: 20%;
+    }
+    nav {
+        top: 40%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .title {
+        margin-top: 80px;
+
+        .title-heading p {
+            font-size: 90px;
+        }
+
+        .title-subheading {
+            margin-top: -20px;
+        }
+        
+        .title-subheading p {
+            font-size: 80px;
+        }
+    }
+
+    .project-details img {
+        max-height: 150px;
+        margin-top: 0px;
     }
 }

@@ -1,3 +1,21 @@
+@media screen and (max-width: 1740px) {
+    .title {
+        margin-top: 6%;
+
+        .txt-my {
+            font-size: 160px;
+        }
+
+        .txt-section {
+            font-size: 120px;
+        }
+    }
+
+    nav {
+        top: 40%;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .title {
         margin-top: 8%;
@@ -16,12 +34,13 @@
     }
 }
 
-@media screen and (max-width: 1740px) {
+
+@media screen and (max-width: 1280px) {
     .title {
         margin-top: 6%;
 
         .txt-my {
-            font-size: 160px;
+            font-size: 140px;
         }
 
         .txt-section {
@@ -29,7 +48,7 @@
         }
     }
 
-    nav {
-        top: 40%;
+    .img {
+        width: 200px;
     }
 }

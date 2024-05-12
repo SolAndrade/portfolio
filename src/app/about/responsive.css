@@ -1,10 +1,23 @@
+@media screen and (min-width: 1741px) {
+    .top-description {
+        width: 75%;
+    }
+}
+
 @media screen and (max-width: 1740px) {
     .top-description {
-        width: 80%;
+        width: 85%;
     }
 
     .top-description p {
-        text-indent: 200px;
+        font-size: 80px;
+        text-indent: 170px;
+    }
+
+    .bottom-description p {
+        font-size: 80px;
+        text-indent: 500px;
+        width: 65%;
     }
 }
 
@@ -44,25 +57,49 @@
     }
 }
 
-@media screen and (max-width: 1740px) {
+
+@media screen and (max-width: 1280px) {
     .top-description {
-        width: 85%;
+        width: 88%;
     }
 
     .top-description p {
-        font-size: 80px;
-        text-indent: 170px;
+        font-size: 58px;
+        text-indent: 330px;
+    }
+
+    .about-me-descriptions {
+        .circle {
+            margin: 2.2em 0 0 50px;
+        }
     }
 
     .bottom-description p {
-        font-size: 80px;
-        text-indent: 500px;
-        width: 65%;
+        font-size: 58px;
+        text-indent: 450px;
+        width: 68%;
+        margin-top: 5%;
     }
-}
 
-@media screen and (min-width: 1741px) {
-    .top-description {
-        width: 75%;
+    .about-me-img {
+        width: 60%;
+    }
+    
+    .top-skills-display p,
+    .bottom-skills-display p {
+        font-size: 40px;
+    }
+
+    .footer {
+        .cv-content p,
+        .contact-content p {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+    
+        .cv-button,
+        .contact-button {
+            font-size: 20px;
+        }
     }
 }
