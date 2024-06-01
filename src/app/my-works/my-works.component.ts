@@ -10,7 +10,7 @@ import { Project } from '../models/project.model';
 @Component({
   selector: 'app-my-works',
   templateUrl: './my-works.component.html',
-  styleUrls: ['./my-works.component.css', './responsive.css', './animations.css']
+  styleUrls: ['./my-works.component.css', './animations.css', './responsive.css']
 })
 export class MyWorksComponent implements OnInit {
   projects2024: Project[] = [];
@@ -28,6 +28,7 @@ export class MyWorksComponent implements OnInit {
   titleEnd: string = 'Works';
 
   isAnimationActive: any;
+  isMenuAnimationActive = false;
   layerProjects = false;
   displayNav = false;
 
@@ -42,6 +43,7 @@ export class MyWorksComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    //console.log('MyWorksComponent ngOnInit isMenuActive: ', this.isMenuAnimationActive);
     this._http.get<any>(this.projectsRoute).subscribe(data => {
       this.projects = data;
       this.projects2024 = data.works2024;
@@ -55,12 +57,16 @@ export class MyWorksComponent implements OnInit {
     setTimeout(() => {
       this.displayNav = true;
     }, 1000);
+    const navAnimationBar = this._elRef.nativeElement.querySelector('.nav-animation-bar');
+    setTimeout(() => {
+      this.renderer.setStyle(navAnimationBar, 'z-index', '3');
+    }, 2000);
     setTimeout(() => {
       const worksIndexElement = this._elRef.nativeElement.querySelector('.works-index');
       if (worksIndexElement) {
         this.renderer.setStyle(worksIndexElement, 'z-index', '5');
       }
-    }, 1000);
+    }, 2000);
 
   }
 
@@ -68,21 +74,47 @@ export class MyWorksComponent implements OnInit {
     if (page === '/works') {
       return;
     }
-    this.isAnimationActive = true;
+    const navAnimationBar = this._elRef.nativeElement.querySelector('.nav-animation-bar');
+    this.renderer.setStyle(navAnimationBar, 'z-index', '4');
     const worksIndexElement = this._elRef.nativeElement.querySelector('.works-index');
     if (worksIndexElement) {
-      this.renderer.setStyle(worksIndexElement, 'z-index', '0');
+      this.renderer.setStyle(worksIndexElement, 'z-index', '2');
     }
+    this.isAnimationActive = true;
     setTimeout(() => {
       this._router.navigate([page]);
     }, 2500);
+  }
+
+  redirectMenu(page: any) {
+    this._router.navigate([page]);
   }
 
   updateDisplay(year: number) {
     this.year = year;
   }
 
+  showMenu() {
+    const worksIndexElement = this._elRef.nativeElement.querySelector('.works-index');
+    this.isMenuAnimationActive = !this.isMenuAnimationActive;
+    //console.log('isMenuActive: ', this.isMenuAnimationActive);
+    if (worksIndexElement) {
+      if (this.isMenuAnimationActive) {
+        this.renderer.setStyle(worksIndexElement, 'z-index', '0');
+        //console.log('content index 0');
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+        setTimeout(() => {
+          this.renderer.setStyle(worksIndexElement, 'z-index', '5');
+          //console.log('content index 5');
+        }, 500);
+      }
+    }
+  }
+
   handleHover(imageId: string, project: string): void {
+    console.log('handleHover', imageId, project);
     const images = document.querySelectorAll('.img');
 
     if (images) {

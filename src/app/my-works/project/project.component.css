@@ -85,42 +85,60 @@ nav {
 .project-details img {
     max-height: 250px;
     margin-top: 30px;
+    width: 50%;
 }
 
 .project-details {
     padding: 0px 50px;
     height: 100%;
     margin-top: 26%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 30px;
 
-    .detail-section p {
-        margin: 0;
-    }
-
-    .detail-section {
+    .project-data {
         display: flex;
-        margin: 20px 0;
 
-        .detail-type {
-            font: 400 16px Inter, sans-serif;
-            color: #979797;
-            width: 90px;
+        .detail-section p {
+            margin: 0;
         }
 
-        .detail-info {
-            font: 400 16px Inter, sans-serif;
+        .detail-section {
+            display: flex;
+            margin: 20px 0;
+
+            .detail-type {
+                font: 400 16px Inter, sans-serif;
+                color: #979797;
+                width: 90px;
+            }
+
+            .detail-info {
+                font: 400 16px Inter, sans-serif;
+            }
+        }
+
+        .visit-site {
+            display: flex;
+            align-items: end;
+            margin-bottom: 20px;
+            margin-left: 15px;
+        }
+
+        .visit-site a {
+            margin-left: 30px;
+            font: 300 16px Inter, sans-serif;
+            color: black;
+            text-decoration: none;
+            font-style: italic;
         }
     }
 
-    .detail-section a {
-        margin-left: 30px;
-        font: 300 16px Inter, sans-serif;
-        color: black;
-        text-decoration: none;
-        font-style: italic;
-    }
 }
 
-.project-images, .isologo-container {
+.project-images,
+.isologo-container {
     display: flex;
     justify-content: flex-end;
     right: 0;
@@ -211,54 +229,4 @@ nav.active {
 .nav-buttons.active,
 .main-project-details.active {
     z-index: 5;
-}
-
-@media screen and (min-width: 1741px) {
-    .project-images img {
-        max-width: 50vw;
-        max-height: 100vh;
-        object-fit: cover;
-    }
-}
-
-
-@media screen and (max-width: 1740px) {
-    .project-details {
-        margin-top: 20%;
-    }
-    nav {
-        top: 40%;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .project-details {
-        margin-top: 20%;
-    }
-    nav {
-        top: 40%;
-    }
-}
-
-@media screen and (max-width: 1280px) {
-    .title {
-        margin-top: 80px;
-
-        .title-heading p {
-            font-size: 90px;
-        }
-
-        .title-subheading {
-            margin-top: -20px;
-        }
-        
-        .title-subheading p {
-            font-size: 80px;
-        }
-    }
-
-    .project-details img {
-        max-height: 150px;
-        margin-top: 0px;
-    }
 }

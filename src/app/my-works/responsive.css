@@ -11,12 +11,16 @@
         }
     }
 
+    .img {
+        width: 250px;
+    }
+
     nav {
         top: 40%;
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
     .title {
         margin-top: 8%;
 
@@ -37,7 +41,7 @@
 
 @media screen and (max-width: 1280px) {
     .title {
-        margin-top: 6%;
+        margin-top: 8%;
 
         .txt-my {
             font-size: 140px;
@@ -51,4 +55,106 @@
     .img {
         width: 200px;
     }
+
+    .works-index {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-height: 850px) {
+    .img {
+        width: 250px;
+    }
+
+    .title {
+        margin-top: 10%;
+
+        .txt-my {
+            font-size: 160px;
+        }
+
+        .txt-section {
+            font-size: 140px;
+        }
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .works-index {
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    body {
+        overflow: auto;
+        height: auto;
+    }
+
+    header {
+        z-index: 4;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .title {
+        margin-top: 30%;
+
+        .txt-my {
+            font-size: 70px;
+        }
+
+        .txt-section {
+            font-size: 55px;
+            padding-bottom: 10px;
+        }
+    }
+
+    .works-index {
+        padding: 0 15px 0 40px;
+        top: 30%;
+
+        .works-projects {
+            flex-direction: column;
+            z-index: 2;
+        }
+
+        .works-year {
+            flex-direction: row;
+            gap: 20px;
+
+            .works-year-txt {
+                margin: 0;
+            }
+
+            .projects-nbr {
+                display: none;
+            }
+
+            .works-preview {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+
+    .works-index.active {
+        z-index: 2;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .menu-animation-bar::before,
+    .menu-animation-bar::after {
+        transition: transform 1s ease;
+    }
+
+    .menu-animation-bar {
+        transition: background 5s ease;
+    }
+
 }

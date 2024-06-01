@@ -28,7 +28,7 @@
     </div>-->
     <div class="works">
         <header>
-            <app-header></app-header>
+            <app-header [isWhite]="isMenuAnimationActive" (menu)="showMenu()"></app-header>
         </header>
         <div class="title">
             <div class="txt-my">
@@ -41,8 +41,12 @@
         <nav [class.display]="displayNav">
             <app-navbar (pageRedirect)="redirectNav($event)"></app-navbar>
         </nav>
+        <div class="menu" [class.active]="isMenuAnimationActive">
+            <app-menu class="menu-content" (pageRedirect)="redirectMenu($event)"></app-menu>
+        </div>
+        <div class="menu-animation-bar" [class.active]="isMenuAnimationActive"></div>
         <div class="nav-animation-bar" [class.active]="isAnimationActive"></div>
-        <div class="works-index">
+        <div class="works-index" [class.active]="isMenuAnimationActive">
             <div class="works-nav">
                 <!--<p class="works-year-txt" (click)="updateDisplay(2024)" [ngClass]="{ 'selected': year === 2024 }">2024</p>
                 <p class="works-year-txt" (click)="updateDisplay(2023)" [ngClass]="{ 'selected': year === 2023 }">2023</p>-->
@@ -55,7 +59,7 @@
                         <div *ngFor="let project of projects2024" class="work-preview-item">
                             <a [routerLink]="['/projects', project.titleHeading]">
                                 <img loading="lazy" [src]="project.previewImg" class="img"
-                                    id="{{ 'img' + project.titleHeading}}"
+                                    id="{{ 'img' + project.titleHeading}}" (touchstart)="handleHover('img' + project.titleHeading, project.titleHeading)" (touchend)="handleUnhover()"
                                     (mouseover)="handleHover('img' + project.titleHeading, project.titleHeading)" />
                             </a>
                         </div>
@@ -68,7 +72,7 @@
                         <div *ngFor="let project of projects2023" class="work-preview-item">
                             <a [routerLink]="['/projects', project.titleHeading]">
                                 <img loading="lazy" [src]="project.previewImg" class="img"
-                                    id="{{ 'img' + project.titleHeading}}"
+                                    id="{{ 'img' + project.titleHeading}}" (touchstart)="handleHover('img' + project.titleHeading, project.titleHeading)" (touchend)="handleUnhover()"
                                     (mouseover)="handleHover('img' + project.titleHeading, project.titleHeading)" />
                             </a>
                         </div>
@@ -81,7 +85,7 @@
                         <div *ngFor="let project of projects2022" class="work-preview-item">
                             <a [routerLink]="['/projects', project.titleHeading]">
                                 <img loading="lazy" [src]="project.previewImg" class="img"
-                                    id="{{ 'img' + project.titleHeading}}"
+                                    id="{{ 'img' + project.titleHeading}}" (touchstart)="handleHover('img' + project.titleHeading, project.titleHeading)" (touchend)="handleUnhover()"
                                     (mouseover)="handleHover('img' + project.titleHeading, project.titleHeading)" />
                             </a>
                         </div>

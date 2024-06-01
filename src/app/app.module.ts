@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
 import { ProjectComponent } from './my-works/project/project.component';
 import { ToggleMenuComponent } from './about/toggle-menu/toggle-menu.component';
 import { TheProcessComponent } from './about/the-process/the-process.component';
-import { MenuComponent } from './home/menu/menu.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [

@@ -26,6 +26,7 @@ export class HomeComponent {
   }
 
   redirectMenu(page: any){
+    this.isMenuAnimationActive = true;
     this._router.navigate([page]);
   }
 

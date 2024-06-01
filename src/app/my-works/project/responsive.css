@@ -1,0 +1,240 @@
+@media screen and (min-width: 1741px) {
+    .project-images img {
+        max-width: 50vw;
+        max-height: 100vh;
+        object-fit: cover;
+    }
+
+    .title {
+        margin-top: 100px;
+    }
+
+    .project-details img {
+        width: 60%;
+    }
+
+    .project-details {
+        gap: 50px;
+    }
+}
+
+
+@media screen and (max-width: 1740px) {
+    .project-details {
+        margin-top: 20%;
+    }
+
+    nav {
+        top: 40%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .title {
+        margin-top: 80px;
+    }
+
+    .project-details img {
+        width: 50%;
+    }
+
+    .project-details {
+        margin-top: 20%;
+        gap: 30px;
+
+        .project-data {
+            .detail-section {
+                margin: 10px 0;
+
+                .detail-type {
+                    font-size: 14px;
+                    width: 70px;
+                }
+
+                .detail-info {
+                    font-size: 14px;
+                }
+            }
+
+            .visit-site {
+                display: flex;
+                align-items: flex-end;
+                margin-bottom: 10px;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .nav-buttons {
+        gap: 20px;
+    }
+
+    .nav-buttons img {
+        width: 70px;
+        height: auto;
+    }
+
+    nav {
+        top: 40%;
+    }
+
+    .images {
+        width: 50vw;
+        height: 100vh;
+    }
+
+    .images img {
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .title {
+        margin-top: 80px;
+
+        .title-heading p {
+            font-size: 75px;
+        }
+
+        .title-subheading {
+            margin-top: -20px;
+        }
+
+        .title-subheading p {
+            font-size: 65px;
+        }
+    }
+
+    .project-details img {
+        max-height: 150px;
+        margin-top: 0px;
+    }
+
+    .project-details {
+        .project-data {
+            .detail-section {
+                .detail-type {
+                    width: 60px;
+                }
+            }
+
+            .link {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .nav-buttons img {
+        width: 60px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    body {
+        overflow: auto;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        margin-top: 140px;
+
+        .title-heading p {
+            font-size: 50px;
+        }
+
+        .title-subheading {
+            margin-top: -10px;
+        }
+
+        .title-subheading p {
+            font-size: 45px;
+        }
+    }
+
+    .project-details {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10%;
+        padding: 0 30px;
+        gap: 20px;
+        align-items: center;
+
+        .project-details-info {
+            width: 100%;
+        }
+
+        .project-data {
+            width: 100%;
+            flex-direction: column;
+
+            .detail-section {
+                margin: 5px 0;
+
+                .detail-type {
+                    font-size: 12px;
+                    width: 30%;
+                }
+
+                .detail-info {
+                    font-size: 12px;
+                    width: 100%;
+                }
+            }
+
+            .visit-site {
+                align-items: flex-start;
+                margin: 20px 0 0;
+                width: 100%;
+            }
+
+            .visit-site a {
+                position: absolute;
+                margin-left: 0px;
+                font: 500 20px Inter, sans-serif;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    .project-details img {
+        max-height: 80px;
+        width: auto;
+    }
+
+    .main-view {
+        flex-direction: column;
+
+        .main-project-details {
+            justify-content: center;
+        }
+    }
+
+    nav {
+        display: none;
+    }
+
+    .images {
+        width: 100vw;
+        height: auto;
+        margin-top: 30%;
+    }
+
+    .images img {
+        object-fit: cover;
+        width: 100vw;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .project-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+}

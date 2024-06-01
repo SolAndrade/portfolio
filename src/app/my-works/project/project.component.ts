@@ -1,6 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JsonResponse, Project } from 'src/app/models/project.model';
 import { WorksService } from 'src/app/services/works.service';
@@ -59,7 +59,7 @@ export class ProjectComponent implements OnInit {
     private route: ActivatedRoute,
     private worksService: WorksService,
     private _http: HttpClient,
-    private _router: Router
+    private _router: Router,
   ) {}
 
   ngOnInit(): void {
